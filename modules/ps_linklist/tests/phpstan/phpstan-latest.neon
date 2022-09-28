@@ -1,0 +1,6 @@
+includes:
+	- %currentWorkingDirectory%/tests/phpstan/phpstan.neon
+
+parameters:
+  ignoreErrors:
+    - '#Parameter \#3 \$lang of static method LanguageCore\:\:updateMultilangFromClass\(\) expects string, Language given.#'

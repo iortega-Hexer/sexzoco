@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>magicscroll</name>
+	<displayName><![CDATA[Magic Scroll]]></displayName>
+	<version><![CDATA[5.5.14]]></version>
+	<description><![CDATA[Effortlessly scroll through images and/or text on your web pages.]]></description>
+	<author><![CDATA[Magic Toolbox]]></author>
+	<tab><![CDATA[Tools]]></tab>
+	<confirmUninstall><![CDATA[All magicscroll settings would be deleted. Do you really want to uninstall this module ?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,36 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{codfee}prestashop>codfee_c05b1787b97c64eef53c50218f3ad56d'] = 'Contrassegno';
+$_MODULE['<{codfee}prestashop>codfee_5b10ca66bd100c8e0ed5b3fd21db1f94'] = 'Accetta pagamento in contrassegno';
+$_MODULE['<{codfee}prestashop>codfee_37be07209f53a5d636d5c904ca9ae64c'] = 'Percentuale';
+$_MODULE['<{codfee}prestashop>codfee_3d5a011fdba2979f8d0ffd30b9f5c6ba'] = 'Percentuale';
+$_MODULE['<{codfee}prestashop>codfee_b17f3f4dcf653a5776792498a9b44d6a'] = 'Aggiorna settaggi';
+$_MODULE['<{codfee}prestashop>codfee_6357d3551190ec7e79371a8570121d3a'] = 'Ci sono';
+$_MODULE['<{codfee}prestashop>codfee_4ce81305b7edb043d0a7a5c75cab17d0'] = 'C\'è';
+$_MODULE['<{codfee}prestashop>codfee_07213a0161f52846ab198be103b5ab43'] = 'errori';
+$_MODULE['<{codfee}prestashop>codfee_cb5e100e5a9a3e7f6d1fd97512215282'] = 'errore';
+$_MODULE['<{codfee}prestashop>codfee_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Questo pagamento non è disponibile';
+$_MODULE['<{codfee}prestashop>codfee_val_25c44465ed210ff7f440074bc3765ba3'] = 'Diritto di contrassegno';
+$_MODULE['<{codfee}prestashop>codfee_val_f1d3b424cd68795ecaa552883759aceb'] = 'Sommario ordine';
+$_MODULE['<{codfee}prestashop>codfee_val_572da7ef1411f2a12409e752f3eb2f7a'] = 'Il tuo carrello è vuoto';
+$_MODULE['<{codfee}prestashop>codfee_val_8861c5d3fa54b330d1f60ba50fcc4aab'] = 'Hai scelto di pagare in contanti in contrassegno al momento della consegna.';
+$_MODULE['<{codfee}prestashop>codfee_val_965e8ec03f7b6aeeb4bd1a95f3587ea2'] = 'Dettagli del tuo ordine (tasse escluse)';
+$_MODULE['<{codfee}prestashop>codfee_val_2ca3deb5cd68fa9119b285804fab572f'] = 'Ordine:';
+$_MODULE['<{codfee}prestashop>codfee_val_591e94b932145579f74fa5dcd191bf98'] = 'Costo di spedizione:';
+$_MODULE['<{codfee}prestashop>codfee_val_958c24c028868c3493535bc80c7a16e4'] = 'Il diritto di contrassegno sarà aggiunto al costo del trasporto.';
+$_MODULE['<{codfee}prestashop>codfee_val_66c4c5112f455a19afde47829df363fa'] = 'Totale:';
+$_MODULE['<{codfee}prestashop>codfee_val_7060a20aa356eeca216a2e0b580331fc'] = 'Prego conferma il tuo ordine premendo su \'Confermo il mio ordine\'';
+$_MODULE['<{codfee}prestashop>codfee_val_569fd05bdafa1712c4f6be5b153b8418'] = 'Altri metodi di pagamento';
+$_MODULE['<{codfee}prestashop>codfee_val_52bab1c3ac8aff9159be10acf1d5e55e'] = 'Confermo il mio ordine';
+$_MODULE['<{codfee}prestashop>payment_return_2e2117b7c81aa9ea6931641ea2c6499f'] = 'Il tuo ordine su ';
+$_MODULE['<{codfee}prestashop>payment_return_75fbf512d744977d62599cc3f0ae2bb4'] = 'è stato completato correttamente.';
+$_MODULE['<{codfee}prestashop>payment_return_1a10243c0c48da99af3edeaaf59f5bfe'] = 'Il pagamento  dovrà essere fatto in contanti direttamente al corriere al momento della consegna.';
+$_MODULE['<{codfee}prestashop>payment_return_3be457684cc05cc5e2d72cb209381d3e'] = 'Totale ordine effettuato:';
+$_MODULE['<{codfee}prestashop>payment_return_49849739f555740f5e7443d67e3486a6'] = 'Per eventuali altre informazioni contattate il nostro';
+$_MODULE['<{codfee}prestashop>payment_return_576e30e62b4ca426d0401412102fc9df'] = 'supporto clienti';
+$_MODULE['<{codfee}prestashop>payment_return_300225ee958b6350abc51805dab83c24'] = 'Continua la navigazione';
+$_MODULE['<{codfee}prestashop>payment_c05b1787b97c64eef53c50218f3ad56d'] = 'Contrassegno con diritto di contrassegno';
+$_MODULE['<{codfee}prestashop>payment_a451fbb92d613fb72b8877268908d117'] = 'Paga al corriere alla consegna:';
+$_MODULE['<{codfee}prestashop>payment_f5d58fb3143bb328a0f331a3961a105d'] = 'Diritto di contrassegno';

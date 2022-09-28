@@ -1,0 +1,3382 @@
+@import '_definiciones.sass'
+@import '_funciones.sass'
+
+//elementos generales
+.card
+  box-shadow: none
+  border: none
+.alert
+  list-style: none
+#content-wrapper
+  #main
+    .page-footer
+      margin: 0px auto
+      width: 100%
+.bootstrap-touchspin .group-span-filestyle .btn-touchspin, .group-span-filestyle .bootstrap-touchspin .btn-touchspin, .group-span-filestyle .btn-default
+  background: $tertiary
+  padding: 0px
+  font-size: 14px
+.custom-checkbox
+  input[type="checkbox"] + span
+    border: 1px solid $negro
+.form-control
+  background: #fafafa
+.product-flags
+  list-style: none
+  li.product-flag
+    &.new
+      display: none
+      background: $sixth
+      font-family: $font1
+      font-weight: 500 !important
+      font-size: 14px
+      box-shadow: none
+    &.on-sale
+      background: url(../img/discount.png) no-repeat 0 0 transparent
+      background-size: 70%
+      font-size: 0px
+      box-shadow: none
+      position: absolute
+      top: -14px
+      height: 74px
+      width: 50px
+      right: 0
+    &.discount
+      //display: none
+      background: url(../img/discount.png) no-repeat 0 0 transparent
+      background-size: 70%
+      font-size: 0px
+      box-shadow: none
+      position: absolute
+      top: -14px
+      height: 74px
+      width: 50px
+      right: 0
+      margin-top: 0 !important
+.has-discount
+  .discount
+    display: none
+.bootstrap-touchspin
+  box-shadow: none
+//RRSS
+.social-sharing
+  li
+    background: none
+    box-shadow: none
+    color: $primary
+    font-family: $fontIcon
+    width: 45px
+    height: 45px
+    line-height: 45px
+    border: 1px solid $primary
+    font-size: 40px
+    position: relative
+    transition: .3s
+    a
+      position: relative
+      z-index: 10
+    &::before
+      position: absolute
+    &.facebook
+      background-image: none
+      &::before
+        content: "\e940"
+        background-image: none
+    &.twitter
+      background-image: none
+      &::before
+        content: "\e942"
+        background-image: none
+    &.youtube
+      background-image: none
+      &::before
+        content: "\e943"
+        background-image: none
+    &.instagram
+      background-image: none
+      &::before
+        content: "\e941"
+        background-image: none
+    &.pinterest
+      background-image: none
+      text-indent: 3px
+      font-size: 28px
+      &::before
+        content: "\e91a"
+        background-image: none
+    &:hover
+      background-image: none !important
+      background-color: $tertiary
+      &::before
+        background-image: none
+//buscador
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-corner-all
+  display: none !important
+.block-social
+  ul
+    display: flex
+    justify-content: center
+    li
+      background: none
+      border-radius: 50%
+      width: 41px
+      height: 41px
+      border: 1px solid $negro
+      position: relative
+      line-height: 41px
+      margin-right: 32px
+      &:last-child
+        margin-right: 0px
+      a
+        position: absolute
+        top: 0
+        max-width: 100%
+      &:hover
+        background-color: $hoverfooter
+      &::before
+        background: none
+        font-size: 41px
+        color: $negro
+      &.facebook
+        &::before
+          content: "\e940"
+      &.twitter
+        &::before
+          content: "\e942"
+      &.youtube
+        &::before
+          content: "\e943"
+      &.instagram
+        &::before
+          content: "\e941"
+//slick
+.slick-slider
+  .slick-list
+    //overflow-y: visible
+    padding-top: 15px
+  .slick-dots
+    //bottom: 1.5rem
+    li
+      &.slick-active
+        button
+          &::before
+            color: $fourth
+      button
+        &::before
+          color: $fourth
+          opacity: 0.5
+  .slick-arrow
+    border: 2px solid $secondary
+    border-radius: 50%
+    height: 31px
+    width: 31px
+    &:hover
+      background: $white
+    &.slick-next
+      &::before
+        font-family: $fontIcon
+        content: '\e912'
+        color: $secondary
+    &.slick-prev
+      transform: rotate(-180deg)
+      top: 46%
+      &::before
+        font-family: $fontIcon
+        content: '\e912'
+        color: $secondary
+//FORMULARIOS
+form
+  +row()
+  .fitem
+    //+col-(6)
+    flex-basis: 100%
+    box-sizing: border-box
+    padding: 5px
+    text-align: left
+    &.radio
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      label
+        color: #3a3a3a
+        margin-right: 30px
+        &:last-child
+          margin-right: 0px
+  .fitem.textarea
+    //+col-(12)
+    flex-basis: 96%
+  .fitem.submit
+    +col-(2)
+  .fitem.accept
+    +col-(9)
+    margin-top: 15px
+    color: #76768f
+    span.wpcf7-list-item
+      margin-left: 5px
+      a
+      color: $primary
+      transition: .3s
+      &:hover
+        color: $secondary
+        transition: .3s
+  label
+    color: $negro
+  input, textarea, select
+    width: 100%
+    border: none
+    padding: 10px 0px
+    text-indent: 20px
+    margin-bottom: 10px
+    font-family: $font2
+    font-size: 15px
+    border-radius: 2px
+    background-color: #f9f9f9
+    margin-top: 5px
+    transition: .3s
+    &.error
+      border-radius: 1px solid #ff0000
+    &:focus
+      outline: 1px solid $tertiary !important
+      border: none !important
+  textarea
+    resize: none
+  input[type="submit"], input[type="checkbox"], input[type="radio"]
+    width: auto
+    &:focus
+      outline: 1px solid $tertiary
+  input[type="submit"]
+    background: $tertiary
+    color: $white
+    font-family: $font2
+    font-weight: 500
+    text-transform: uppercase
+    min-width: 160px
+    border-radius: 2px
+    min-height: 45px
+    line-height: 45px
+    transition: .3s
+    font-size: 15px
+    display: inline-block
+    text-align: center
+    margin: 5px auto 0px
+    cursor: pointer
+    text-indent: 0px
+    padding: 0px
+    &:hover
+      background: $primary
+  select
+    color: #76768f
+    background: #fff
+    margin-top: 0px
+    &.error
+      border-radius: 1px solid #ff0000
+    &:focus
+      outline: 1px solid $tertiary
+  .msj
+    display: block
+    margin: 10px auto
+    padding: 20px
+    &.ko
+      background: rgba(172, 0, 0, 0.55)
+      color: #fff
+    br
+      display: block
+.psgdpr_consent_message
+  display: flex
+  align-items: center
+  a
+    color: $negro
+    transition: .3s
+    &:hover
+      color: $tertiary
+//pfg-forms
+.pfg-forms
+  background: #F6F5F1
+  border: 1px solid #DEDEDE
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+  padding: 2.5rem 2rem
+  .form-group > label[for="field_captcha"]
+    display: none
+  h3
+    width: 100%
+    font-size: 25px
+    margin-bottom: 15px
+  fieldset
+    width: 90%
+    margin: 0px auto
+    .form-group
+      display: flex
+      flex-direction: column
+      margin: 0px auto
+      width: 100%
+      label
+        font-size: 15px
+        margin: 0px
+        padding: 0px
+        width: 100%
+        text-align: left
+        font-weight: 500
+        font-family: $font2
+      input, textarea
+        background: $white
+        border-radius: 2px
+      textarea
+        max-height: 120px
+      input[type="file"]
+        background: none
+        padding-left: 0px
+        margin-left: 0px
+        text-indent: 0px
+      > div
+        padding: 0px
+        width: 100%
+      &.half
+        width: 48%
+        float: left
+        margin-right: 2%
+    #gdpr_consent
+      margin: 10px auto 20px
+    .submit
+      .btn.btn-primary
+        border-radius: 0px
+        text-transform: inherit
+        span
+          text-transform: inherit
+    .offset-md-3
+      margin-left: 0px !important
+  .adveg-grecaptcha iframe
+    margin: 0px !important
+#cookieNotice
+  width: 100% !important
+  opacity: 1 !important
+  background: rgba(255,255,255,.6) !important
+  top: 0
+  #cookieNoticeContent
+    position: absolute !important
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    max-width: 30vw
+    background: $white
+    padding: 0px
+    text-align: center
+    margin: 0px auto !important
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35)
+    > table
+      text-align: center
+      margin: 0px
+      color: $negro
+      max-width: 100%
+      width: 100%
+      thead
+        height: 40px
+        line-height: 40px
+        th
+          color: $primary
+          font-size: 18px
+          font-weight: 500
+          font-family: $font2
+          text-align: center
+          &.label-notify
+            background: #CF9C43
+          .closeFontAwesome
+            &::before
+              font-family: $fontIcon
+              content: "x"
+              color: $negro
+              font-size: 35px
+              width: 50px
+              margin: 0px auto
+              padding: 0px
+      tbody
+        display: flex
+        padding: 2rem 0rem 2rem 3rem
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        align-items: center
+    svg
+      max-width: 100%
+  p
+    color: $negro !important
+    margin-top: 30px !important
+    font-size: 30px
+    font-weight: normal
+    font-family: $font1
+    text-align: left
+    a
+      color: $primary
+      transition: .3s
+      width: 100%
+      display: block
+      margin: 10px auto 10px
+      text-decoration: underline
+      font-size: 18px
+      font-weight: 500
+      font-family: $font2
+      text-align: center
+      width: 100%
+      &:hover
+        color: $sixth
+  .closeButtonNormal
+    color: $white !important
+    background: #CF9C43
+    margin-top: 30px
+    transition: .3s
+    min-width: 310px
+    border-radius: 2px
+    min-height: 50px
+    line-height: 50px
+    font-weight: 500
+    font-size: 25px
+    text-transform: capitalize
+    text-transform: uppercase
+    font-family: $font2
+    text-align: center
+    padding: 0px
+    &:hover
+      background: $primary
+//popup
+#popup
+  visibility: hidden
+  opacity: 0
+  //margin-top: -300px
+  margin-top: 0
+  height: 0
+  overflow: hidden
+  &.visible
+    overflow: visible
+    visibility: visible
+    opacity: 1
+    background-color: rgba(0,0,0,0.8)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 0
+    z-index: 999
+    transition: all .8s
+    height: auto
+  .popup-contenedor
+    position: relative
+    margin: 7% auto
+    max-width: 90%
+    .video
+      object
+        max-width: 100%
+        embed
+          max-width: 100%
+  .popup-cerrar
+    position: absolute
+    top: 3px
+    right: 3px
+    background-color: #333
+    padding: 7px 10px
+    font-size: 20px
+    text-decoration: none
+    line-height: 1
+    color: #fff
+    transition: .3s
+    cursor: pointer
+    &:hover
+      background: $primary
+      transition: .3s
+//footer
+#footer
+  background: url(../img/fondo.png) repeat 0 0 $bgfooter
+  background-blend-mode: multiply
+  //background-size: 100% 100%
+  width: 100%
+  margin: 0px auto
+  padding: 0px
+  a
+    color: $negro
+    &:hover
+      color: $sixth
+  .hook_footer_before
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    margin: 0px auto
+    width: 100%
+    max-width: $max-width
+    float: none
+    padding: 0px
+    .block_newsletter
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin: 58px auto 25px
+      p
+        padding: 0px
+      .subclaim
+        margin: 18px auto 0px
+        font-size: 24px
+        font-weight: 400
+      form
+        margin: 30px auto 0px
+        input[type="email"]
+          background-color: $white
+          margin: 0px
+          padding: 0px
+          line-height: 45px
+          height: 45px
+          border-top-right-radius: 0px
+          border-bottom-right-radius: 0px
+          &:focus
+            border: 1px solid $hoverfooter !important
+        input[type="submit"]
+          border-top-left-radius: 0px
+          border-bottom-left-radius: 0px
+          margin: 0px auto
+          background: $hoverfooter
+          &:hover
+            background: $primary
+        #gdpr_consent
+          margin-top: 10px
+      .block-social
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+  .footer-container
+    box-shadow: none
+    margin: 0px auto
+    padding: 0px
+    float: none
+    position: relative
+    width: 100%
+    max-width: 1200px
+    &::before
+      position: absolute
+      width: 100%
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABIoAAAACCAYAAAA3vTdTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACOSURBVHgB7djBDQJBCIXhnwq0A+m/KuxgrWC87MFED7pjdoF9X8KdBCYZnrHRGMM51nWtLJzcnHou5JrxvznyjWxvXWrSHonIrEC6CeTVspa8u9NXxbln7jlLb4uZbe7D+NEBAVGWz72Tk1PXjfNwZIaOfJmlHRIR+SyQPQXnFPT2oEfIFtSRNSxqERQ9ATvLHwMD3/L/AAAAAElFTkSuQmCC') no-repeat 0 0 transparent
+      background-size: 100%
+      content: ''
+      height: 2px
+      top: 0
+    .hook_footer
+      margin: 31px auto
+      width: 100%
+      .content_hook_footer
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .h3
+          font-size: 18px
+          font-weight: bold
+          font-family: $font2
+          margin-bottom: 18px
+        ul
+          list-style: none
+          li
+            font-size: 15px
+            margin: 15px auto
+            a
+              font-size: 15px
+              &:hover
+                color: $hoverfooter
+        > div
+          flex-basis: 25%
+          padding:  0px
+          margin: 0px auto
+        .block-contact
+          display: flex
+          flex-direction: column
+          flex-basis: 40%
+          svg, img
+            margin-bottom: 33px
+            max-width: 100%
+          a
+            position: relative
+            padding-left: 20px
+            margin-bottom: 10px
+            font-size: 15px
+            font-weight: 500
+          .iconmoon
+            display: none
+          .phone
+            &::before
+              font-family: $fontIcon
+              content: '\e919'
+              position: absolute
+              left: 3px
+              top: 0
+          .email
+            &::before
+              font-family: $fontIcon
+              content: '\e91d'
+              position: absolute
+              left: 0
+              top: 0
+              font-size: 13px
+          .stores
+            &::before
+              font-family: $fontIcon
+              content: '\e918'
+              position: absolute
+              left: 0
+              top: 0
+          .footer-pay
+            color: $negro
+            ul
+              li
+                margin: 0px 1em 0px 0px
+                img
+                  margin-bottom: 10px
+                &:last-child
+                  margin-right: 0px
+        #block_myaccount_infos
+          flex-basis: 20%
+          .text-uppercase
+            text-transform: inherit
+        .ps-linksblock
+          flex-basis: 50%
+          float: none
+          width: 100%
+          .wrapper
+            position: relative
+            padding-left: 30px
+            padding-right: 0px
+            &::before
+              position: absolute
+              content: ''
+              background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAACeCAYAAAD30LAiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADBSURBVHgB5ZVRDoMgDIaLF7A3kN1gu/8ldoOxEwgnYMHQpQjMCpossQ/Kl7Z/WyABYG3eex3+Q+SJA3B4cMBq2MjhXg1LOvC/wwYWigN1HGoJcggo57Yjh0wHQO7BfQKYge4QGGWTbswDm2ELTLKwYqPYsNfCEU4o2g3fS6HoTveoXRRsXNsMWtT+B4xs7BzgPHjHteOe+dBjdK3HWNyQRMAeL2CqamSv1KOUKua45bt+2mwVDNSKPjk4mcCcqSX2AXUTOB/i+bnXAAAAAElFTkSuQmCC')no-repeat 0 0 transparent
+              height: 100%
+              width: 2px
+              left: 0
+    .after-footer-devices
+      display: none
+    .footer-pay
+      color: $negro
+      .footer-pay-title
+        font-size: 15px
+        font-weight: 500
+        margin-bottom: 10px
+        display: block
+        width: 100%
+      ul
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        list-style: none
+        li
+          margin: 0px 1em 0px 0px
+          img
+            margin-bottom: 10px
+          svg
+            fill: $negro
+            color: $negro
+            margin-bottom: 0 !important
+            path
+              fill: $negro
+          &:last-child
+            margin-right: 0px
+  .copyright
+    background: $primary
+    color: $white
+    width: 100%
+    margin: 0px auto
+    a, p
+      color: $white
+      font-size: 14px
+    a:hover
+      color: $secondary
+    .firma
+      color: $white
+      width: 100%
+      max-width: $max-width
+      margin: 0px auto
+      display: flex
+      justify-content: space-between
+      font-size: 14px
+      align-items: center
+      .ano
+        text-align: left
+      .ps-linksblock
+        flex-basis: 40%
+        .wrapper
+          float: none
+          width: 100%
+        .h3, .title, div[data-toggle="collapse"]
+          display: none
+        ul
+          list-style: none
+          display: flex
+          align-items: center
+          margin: 0px auto
+          li
+            margin-right: 10px
+      .firma-db
+        display: flex
+        flex-basis: 40%
+        align-items: center
+        > div
+          display: flex
+          align-items: center
+          &:last-child
+            svg
+              margin-left: 5px
+//productos
+.products
+  article
+    height: 100%
+    width: 100%
+    box-sizing: border-box
+    max-width: 30%
+    .thumbnail-container
+      box-shadow: none
+      border: 1px solid #DEDEDE
+      height: 100%
+      width: 100%
+      box-sizing: border-box
+      .product-thumbnail
+        overflow: hidden
+        img
+          margin: 0px auto
+          transition: .3s
+          position: relative
+          object-fit: contain
+          width: 100%
+          height: 100%
+      .product-description
+        width: 100%
+        box-sizing: border-box
+        max-width: 100%
+        overflow: hidden
+        position: relative
+        text-align: center
+        height: auto
+        padding: 10px 15px 25px
+        background: #FBFAF7
+        .product-title
+          font-size: 13px
+          font-family: $font2
+          text-transform: uppercase
+          color: $primary
+          font-weight: 500
+          display: block
+          margin: 0px auto
+          width: 90%
+          min-height: 45px
+          a
+            font-size: 13px
+            font-family: $font2
+            text-transform: uppercase
+            color: $primary
+            font-weight: 500
+        .product-price-and-shipping
+          width: 100%
+          margin: 0px auto 15px
+          display: flex
+          flex-direction: column
+          align-items: center
+          min-height: 55px
+          justify-content: flex-end
+          .regular-price
+            font-weight: 500
+          .price
+            font-size: 25px
+            color: $primary
+            font-weight: 500
+        .comments_note
+        .btn-add-to-car
+          display: block
+          margin: 0px auto
+          text-align: center
+          text-indent: 10px
+          width: 100%
+          .btn
+            position: relative
+            box-shadow: none
+            width: 90%
+            display: block
+            margin: 0px auto
+            font-size: 14px
+            font-weight: bold
+            &::before
+              font-weight: 400
+              position: absolute
+              left: 1rem
+              font-family: $fontIcon
+              content: '\e900'
+              top: 0
+              color: $white
+              font-size: 25px
+      .product-flags
+        list-style: none
+        .new
+          display: none
+        .on-sale
+          background: url(../img/discount.png) no-repeat 0 0 transparent
+          background-size: 70%
+          font-size: 0px
+          box-shadow: none
+          position: absolute
+          top: -14px
+          height: 74px
+          width: 50px
+          right: 0
+        .discount
+          //display: none
+      &:hover
+        .product-thumbnail
+          img
+            transform: scale(1.1)
+        .product-description
+          &::after
+            display: none
+          .btn-add-to-car
+            .btn
+              background: $secondary
+//home
+.page-home
+  .featured-products
+    width: 100%
+    margin: 0px auto
+    background: url(../img/fondo.png) repeat 0 0 transparent
+    background-blend-mode: multiply
+    z-index: 1
+    //background-size: 100% 100%
+    .products-section-title
+      width: 100%
+      text-align: center
+      margin: 0px auto
+      display: block
+      padding: 31px 0px 20px
+      text-transform: inherit !important
+    .products
+      width: 100%
+      max-width: $max-width
+      margin: 0px auto 50px
+      &.without-slick
+        justify-content: center
+        article
+          max-width: 22%
+    .products-devices
+      max-width: $max-width
+      margin: 0px auto
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+  #homecategoriez
+    width: 100%
+    margin: 0px auto
+    display: block
+    padding: 0px 0px 30px 0px
+    .title
+      width: 100%
+      text-align: center
+      display: block
+      margin: 0px auto
+      padding-top: 41px
+      padding-bottom: 36px
+    .category-home-list
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      width: 100%
+      max-width: $max-width
+      margin: 0px auto
+      .bloque
+        background: #F6F5F1
+        flex-basis: 47%
+        margin: 0px auto 35px
+        display: flex
+        width: 100%
+        transition: .5s
+        border: 1px solid transparent
+        .category-home-item
+          display: flex
+          flex-direction: column
+          text-align: left
+          padding: 39px 0px 29px 32px
+          .category-title
+            font-family: $font1
+            font-size: 30px
+            font-weight: normal
+            padding: 0px
+            text-align: left
+          .category-description
+            text-align: left
+            font-size: 17px
+            font-weight: 400
+            color: $negro
+            margin: 10px auto
+            line-height: 22px
+            min-height: 80px
+          .category-more
+            color: $tertiary
+            text-decoration: none
+            font-size: 15px
+            font-weight: bold
+            text-transform: uppercase
+            position: relative
+            margin: 15px auto 0px 0px
+            &::before
+              content: ''
+              height: 2px
+              width: 111px
+              left: 0
+              bottom: -3px
+              background: $tertiary
+              display: block
+              position: absolute
+        &:nth-child(1)
+          .category-title
+            color: #83664C
+        &:nth-child(2)
+          .category-title
+            color: #7A4B49
+        &:nth-child(3)
+          .category-title
+            color: #4C4B4B
+        &:nth-child(4)
+          .category-title
+            color: #372B14
+        img
+          border: none
+          object-fit: contain
+          width: 100%
+          //max-height: 229px
+          height: 100%
+          max-width: 50%
+          margin: 0px 0px 0px auto
+        &:hover
+          background: $white
+          border-color: $fourth
+  #custom-text
+    width: 100%
+    display: block
+    padding: 0px
+    margin: 80px auto
+    background: url(../img/cacerola.png) no-repeat 74% center $bgfooter
+    padding-top: 53px
+    padding-bottom: 47px
+    .limitar
+      width: 100%
+      margin: 0px auto
+      max-width: $max-width
+      position: relative
+      display: flex
+      .img
+        position: absolute
+        z-index: 9
+        max-height: 359px
+        top: 50%
+        transform: translateY(-50%)
+        overflow: hidden
+        max-width: 43%
+        left: 18px
+        a
+          width: 100%
+          height: 100%
+          display: block
+          position: relative
+          z-index: 8
+        img
+          object-fit: contain
+          width: 100%
+          height: 100%
+        &::before
+          content: ''
+          position: absolute
+          left: 49%
+          z-index: 9
+          width: 100px
+          height: 100px
+          top: 45%
+          background: rgba(255,255,255,0.5)
+          border-radius: 50%
+          transform: translateX(-50%) translateY(-50%)
+          text-align: center
+          transition: opacity linear .3s
+          opacity: 1
+          cursor: pointer
+        &::after
+          position: absolute
+          content: '\e916'
+          left: 50%
+          z-index: 9
+          font-family: $fontIcon
+          width: 100px
+          height: 100px
+          color: $tertiary
+          display: block
+          font-size: 50px
+          top: 50%
+          transform: translateX(-50%) translateY(-50%)
+          transition: opacity linear .3s
+          opacity: 1
+          cursor: pointer
+        &:hover
+          &::before
+            opacity: 0.8
+          &::after
+            opacity: 0.8
+      .text
+        max-width: 54%
+        margin: 0px 0px 0px auto
+        text-align: left
+        .title
+          width: 100%
+          display: block
+          margin: 0px auto 10px
+          color: $primary
+        .subtitle
+          margin: 0px auto
+          background: $sixth
+          color: $white
+          font-family: $font2
+          font-style: italic
+          font-weight: 500
+          font-size: 17px
+          text-transform: uppercase
+          text-indent: 5px
+          clear: both
+          padding: 0px 5px
+        p
+          font-size: 17px
+          font-weight: normal
+  .ybc_block_latest.page_home
+    width: 100%
+    margin: 0px auto
+    display: flex
+    flex-direction: column
+    max-width: $max-width
+    padding: 59px 0px 70px
+    .title_blog
+      width: 100%
+      display: block
+      margin: 0px auto 50px
+      padding: 0px
+      color: $primary
+      font-size: 32px
+      font-family: $font1
+      text-align: center
+      font-weight: normal
+      text-transform: inherit
+    .block_content
+      width: 100%
+      display: block
+      margin: 0px auto
+      li
+        padding: 0px 20px
+        .ybc_item_img
+          img
+            object-fit: cover
+            height: 229px
+            max-width: 500%
+        .ybc-blog-latest-post-content
+          background: #F6F5F1
+          padding: 2.3rem 2.3rem 1.5rem 2rem
+          text-align: center
+          .ybc_title_block
+            font-family: $font2
+            font-size: 17px
+            font-weight: bold
+            text-align: center
+            color: $negro
+            text-transform: inherit
+            padding: 0px
+            margin: 10px auto
+            min-height: 50px
+          .ybc-blog-latest-toolbar
+            .ybc-blog-latest-toolbar-views
+              &::before
+                color: $tertiary
+          .blog_description
+            font-size: 17px
+            font-weight: normal
+            color: $negro
+            text-align: center
+            min-height: 115px
+            p
+              text-align: center
+              font-size: 17px
+              font-weight: normal
+              color: $negro
+          .read_more
+            background-color: $secondary
+            color: $white
+            border: none
+            font-style: normal
+            padding: 0px
+            margin: 20px auto 0px
+            font-size: 15px
+            transition: .3s
+            height: 39px
+            line-height: 39px
+            min-width: 108px
+            min-height: 39px
+            &:hover
+              background-color: $primary
+  .seotitle
+    width: 100%
+    display: block
+    margin: 0px auto 30px
+    max-width: $max-width
+    .title
+      width: 100%
+      display: block
+      margin: 0px auto
+      text-align: center
+      font-weight: 500
+      font-size: 20px
+      color: $primary
+      font-family: $font1
+      span
+        color: $tertiary
+        font-size: 30px
+        position: relative
+        margin-right: 10px
+        padding-right: 5px
+        &::after
+          content: ''
+          position: absolute
+          right: 0
+          background: $primary
+          height: 60%
+          width: 2px
+          top: 8px
+      .fas
+        transition: .3s
+        cursor: pointer
+      .fa-chevron-down
+        &::before
+          font-size: 20px
+    .texto
+      max-height: 0
+      width: 100%
+      opacity: 0
+      transition: linear .5s
+      margin-top: 50px
+      z-index: -1
+      overflow: hidden
+    &.visible
+      .title
+        .fa-chevron-down
+          transform: rotate(-180deg)
+      .texto
+        max-height: 3500px
+        opacity: 1
+        z-index: 999
+//genérico de las páginas
+.page-content
+//404
+#pagenotfound, #products
+  #content-wrapper
+    #main
+      width: 100%
+      position: relative
+      background: $white
+      .page-header
+        width: 100%
+        max-width: $max-width
+        margin: 50px auto 30px
+        padding: 0px
+        position: relative
+      .page-content
+        position: relative
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        background: $white
+        padding: 0em
+  .page-not-found
+    box-shadow: none
+    width: 100%
+    display: block
+    padding: 1rem
+    margin: 0px auto
+    text-align: left
+    .search-widget
+      form
+        input[type="text"]
+          &:focus
+            outline: 1px solid $tertiary
+//grid
+#category
+  .banner-header
+    width: 100%
+    margin: 0px auto
+    img
+      object-fit: cover
+      max-height: 347px
+      box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.3)
+      max-width: 100%
+      width: 100%
+    .category-description
+      width: 100%
+      margin: 56px auto
+      max-width: $max-width
+      .categoryextrafield
+        margin: 0px auto
+        display: block
+        width: 100%
+      h1
+        width: 100%
+        text-align: center
+        margin: 0px auto 43px
+        color: $negro
+      .block-category-inner
+        width: 100%
+        display: block
+        margin: 0px auto
+        #category-description-text
+          margin: 0px auto
+          text-align: left
+          padding: 0px
+          font-size: 17px
+          font-weight: normal
+          color: $negro
+          p
+            margin: 0px auto
+            text-align: left
+            padding: 0px
+            font-size: 17px
+            font-weight: normal
+            color: $negro
+  #wrapper
+    .content-inner
+      display: flex
+      flex-direction: row
+      width: 100%
+      margin: 0px auto
+      max-width: $max-width
+      justify-content: space-between
+      #left-column
+        flex-basis: 20%
+        width: 100%
+        float: none
+        padding: 0px
+        display: flex
+        flex-direction: column
+        .menu.js-top-menu
+          background: #F6F5F1
+          box-shadow: none
+          padding: 0px
+          margin: 0px auto
+          width: 100%
+          display: block
+          .top-menu
+            list-style: none
+            padding: 1em
+            li
+              margin: 10px auto
+              a
+                color: $negro
+                font-style: normal
+                font-weight: normal
+                font-size: 22px
+                transition: .3s
+                margin: 5px auto
+                padding: 0px
+                white-space: normal
+                &.dropdown-item
+                  > span.hidden-md-up
+                    display: inline-block !important
+                    float: none !important
+                    position: absolute
+                    right: 0
+                    z-index: 9999
+                    .navbar-toggler
+                      .remove
+                        display: none
+              .popover.sub-menu.js-sub-menu
+                position: relative
+                box-shadow: none
+                background: none
+                width: 100%
+                min-width: 100%
+                margin-left: 1em
+                top: 0 !important
+                opacity: 0
+                transition: 1s
+                max-height: 0
+                display: block !important
+                z-index: -1
+                .top-menu
+                  padding: 0px
+                  margin: 0px
+                  li
+                    float: none
+                    margin: 0px auto
+                    a
+                      color: $negro
+                      font-style: normal
+                      font-weight: normal
+                      font-size: 18px
+                      transition: .3s
+                      margin: 5px auto
+                      padding: 0px
+                      text-transform: inherit
+                      position: relative
+                      z-index: 1
+                      &.dropdown-item
+                        > span.hidden-md-up
+                          display: none !important
+                    &:hover
+                      a
+                        color: $tertiary
+                &.mostrar
+                  opacity: 1
+                  max-height: 1000px
+                  z-index: 1
+              &:first-child
+                margin-top: 0px
+              &:last-child
+                margin-bottom: 0px
+              &:hover
+                a
+                  color: $tertiary
+                .popover.sub-menu.js-sub-menu
+                  //opacity: 1
+                  //max-height: 1000px
+        .block-categories
+          background: #F6F5F1
+          box-shadow: none
+          padding: 0px
+          margin: 0px auto
+          display: block
+          width: 100%
+          &.notview
+            display: none !important
+          .collapse-icons
+            top: 0.5em
+            bottom: 0
+          .category-top-menu
+            padding: 1rem
+            .category-sub-menu
+              li
+                border: none
+                font-style: normal
+                font-weight: normal
+                font-size: 22px
+                a
+                  border: none
+                  font-style: normal
+                  font-weight: normal
+                  font-size: 22px
+                  color: $negro
+                  margin-bottom: 0.5rem
+                  &:hover
+                    color: $tertiary
+              .category-sub-menu
+                padding-left: 1em
+                a
+                  font-size: 18px
+          ul
+            list-style: none
+          .text-uppercase
+            text-transform: capitalize !important
+            font-style: normal
+            font-weight: 500
+            font-size: 25px
+            font-family: $font2
+            color: $negro
+        #search_filters_wrapper
+          background: #F6F5F1
+          box-shadow: none
+          padding: 0px
+          margin: 0px auto
+          width: 100%
+          display: block
+          #search_filters
+            background: #F6F5F1
+            box-shadow: none
+            margin: 0px auto
+            padding: 1rem
+            .btn.btn-tertiary.js-search-filters-clear-all
+              background: $secondary
+              color: $white
+              text-transform: inherit
+              &:hover
+                background: $primary
+            .text-uppercase
+              text-transform: capitalize !important
+              font-style: normal
+              font-weight: 500
+              font-family: $font2
+              font-size: 25px
+              color: $negro
+            .facet
+              color: $negro
+              .facet-label
+                margin-bottom: 0.5rem
+              .ui-widget-header
+                background: $tertiary
+              .ui-slider
+                .ui-slider-handle
+                  border: 1px solid $negro
+                  width: 0.7em
+                  height: 0.7em
+                  top: -5px
+                &.ui-widget-content
+                  border: 1px solid $tertiary
+                  width: 94%
+              .facet-title
+                color: $negro
+                font-style: normal
+                font-weight: 500
+                font-size: 22px
+                font-family: $font2
+              a
+                color: $negro
+                font-style: normal
+                font-weight: normal
+                font-size: 22px
+                &:hover
+                  color: $tertiary
+            .custom-checkbox
+              input[type="checkbox"] + span
+                border: 1px solid $negro
+          ul
+            list-style: none
+      #content-wrapper
+        flex-basis: 75%
+        width: 100%
+        float: none
+        padding: 0px
+        .pagination
+          color: $negro
+          .page-list
+            box-shadow: none
+            padding: 0px
+            margin-right: 20px
+            a
+              font-weight: 400
+            .current
+              color: $tertiary
+              a
+                color: $tertiary
+                font-weight: 500
+    #products
+      .up
+        text-align: center !important
+        .btn-secondary
+          background: $primary
+          color: $white
+          &:hover
+            background: $tertiary
+    .seobottom
+      overflow: hidden
+      .title
+        font-family: $font2
+        font-size: 28px
+        width: 100%
+        display: block
+        margin: 0px auto
+        color: $primary
+        font-weight: 700
+        text-align: center
+        position: relative
+        margin-bottom: 20px
+        cursor: pointer
+        &::after
+          position: absolute
+          font-family: "Font Awesome 5 Free"
+          font-style: normal
+          font-variant: normal
+          text-rendering: auto
+          content: "\f078"
+          margin-left: 15px
+          color: $tertiary
+          height: 35px
+          width: 35px
+          border-radius: 50%
+          text-align: center
+          line-height: 35px
+          font-weight: 700
+          display: inline-block
+          transition: .3s
+          font-size: 25px
+          top: 10%
+      .contentseo
+        font-size: 18px
+        color: $negro
+        font-family: $font2
+        font-size: 18px
+        max-height: 10px
+        opacity: 0
+        transition: .5s
+        margin-bottom: 20px
+        p
+          font-size: 18px
+          color: $negro
+          font-family: $font2
+          font-size: 18px
+        ul
+          list-style: circle
+          list-style-type: circle
+          padding-left: 20px
+          margin-left: 15px
+      &.visible
+        .title
+          &::after
+            transform: rotate(180deg)
+        .contentseo
+          max-height: 3500px
+          opacity: 1
+.breadcrumb
+  width: 100%
+  display: block
+  margin: 30px auto 10px
+  max-width: $max-width
+  padding: 0px
+  background: none
+  list-style: none
+  opacity: 0.7
+  ol
+    list-style: none
+    padding: 0px
+    display: flex
+  li
+    &::after
+      content: '>' !important
+      color: $primary !important
+    &:last-child
+      &::after
+        content: '' !important
+    a
+      font-size: 16px
+      font-weight: 500
+      color: $primary
+      margin: 0px 5px
+      span
+        font-size: 16px
+        font-weight: 500
+        color: $primary
+    &:first-child
+      a
+        margin-left: 0px
+aside#notifications
+  width: 100%
+  max-width: $max-width
+  display: block
+  margin: 0px auto !important
+  .container
+    &::after
+      display: block
+#products
+  .active_filters
+    border-radius: 2px
+    .active-filter-title
+      font-family: $font2
+    .filter-block
+      box-shadow: none
+  .products
+    article
+      height: 100%
+      .thumbnail-container
+        box-shadow: none
+        border: 1px solid #DEDEDE
+        height: 100%
+        width: 100%
+        .product-thumbnail
+          overflow: hidden
+          img
+            margin: 0px auto
+            transition: .3s
+            position: relative
+            object-fit: contain
+            width: 100%
+            height: 100%
+        .product-description
+          overflow: hidden
+          max-width: 100%
+          width: 100%
+          position: relative
+          text-align: center
+          height: auto
+          padding: 10px 15px 25px
+          background: #FBFAF7
+          .product-title
+            font-size: 13px
+            font-family: $font2
+            text-transform: uppercase
+            color: $primary
+            font-weight: 500
+            display: block
+            margin: 0px auto
+            width: 90%
+            min-height: 45px
+            a
+              font-size: 13px
+              font-family: $font2
+              text-transform: uppercase
+              color: $primary
+              font-weight: 500
+          .product-price-and-shipping
+            width: 100%
+            margin: 0px auto 15px
+            display: flex
+            flex-direction: column
+            align-items: center
+            min-height: 55px
+            justify-content: flex-end
+            .regular-price
+              font-weight: 500
+            .price
+              font-size: 25px
+              color: $primary
+              font-weight: 500
+          .comments_note
+          .btn-add-to-car
+            display: block
+            margin: 0px auto
+            text-align: center
+            text-indent: 10px
+            width: 100%
+            .btn
+              position: relative
+              box-shadow: none
+              width: 90%
+              display: block
+              margin: 0px auto
+              font-size: 14px
+              font-weight: bold
+              &::before
+                font-weight: 400
+                position: absolute
+                left: 1rem
+                font-family: $fontIcon
+                content: '\e900'
+                top: 0
+                color: $white
+                font-size: 25px
+        &:hover
+          .product-thumbnail
+            img
+              transform: scale(1.1)
+          .product-description
+            &::after
+              display: none
+            .btn-add-to-car
+              .btn
+                background: $secondary
+//ficha
+#product
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 17rem
+        position: absolute
+        top: 0
+        left: 0
+      .title-product
+        width: 100%
+        max-width: $max-width
+        margin: 10px auto 0px
+        position: relative
+        h1
+          font-family: $font2
+          color: $primary
+          font-weight: 500
+          font-size: 35px
+        .product-description-short-6
+          margin-bottom: 20px
+      .product-all-info
+        width: 100%
+        max-width: $max-width
+        margin: 16px auto 0px
+        position: relative
+        background: $white
+        display: flex
+        justify-content: space-around
+        align-items: center
+        .products-section-image
+          padding: 0px
+          flex-basis: 50%
+          width: 100%
+          .product-cover
+            img
+              box-shadow: none
+            .layer
+              transition: .5s
+              .zoom-in
+                color: $negro
+          .js-qv-mask
+            width: 100%
+            .product-images > li.thumb-container > .thumb
+              box-shadow: none
+              &:hover
+                border: 1px solid $secondary
+              &.selected
+                border: 1px solid $primary
+        .scroll-box-arrows
+          display: none
+          i
+            bottom: .825rem
+          .left
+            left: -2rem
+          .right
+            right: -2rem
+        .products-section-description
+          padding: 0px
+          background: #FBFAF7
+          border: 1px solid #DEDEDE
+          box-sizing: border-box
+          padding: 1%
+          flex-basis: 40%
+          width: 100%
+          max-width: 348px
+          .prices-pdetails
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            flex-direction: column
+            .product-prices
+              display: flex
+              flex-direction: column
+              align-items: flex-start
+              margin: 0px
+              box-sizing: border-box
+              width: auto
+              > div
+                margin-bottom: 0px
+              .regular-price
+                font-size: 20px
+              .current-price
+                font-size: 40px
+                color: $primary
+                font-family: $font2
+                font-weight: 500
+              .tax-shipping-delivery-label
+                display: none
+          .product-information
+            .product-flags
+              z-index: 1
+            .product-actions
+              .product-variants
+                margin: 0px auto
+                width: 100%
+                .product-variants-item
+                  margin: 0px auto
+                  width: 100%
+                  .control-label
+                    font-size: 15px
+                    font-weight: 500
+                  select
+                    box-shadow: none
+                    min-width: 100px
+                    text-indent: 0.3em
+                    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%),radial-gradient(#ddd 70%, transparent 72%)
+                    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - .5em) .5em
+                    background-size: 5px 5px, 5px 5px, 1.5em 1.5em
+                    background-repeat: no-repeat
+                    &:focus
+                      background-image: linear-gradient(45deg, white 50%, transparent 50%),linear-gradient(135deg, transparent 50%, white 50%),radial-gradient(gray 70%, transparent 72%)
+                      background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - .5em) .5em
+                      background-size: 5px 5px, 5px 5px, 1.5em 1.5em
+                      background-repeat: no-repeat
+                      border: 1px solid $secondary !important
+                      outline: 0
+              .product-add-to-cart
+                width: 100%
+                margin: 0px auto
+                display: block
+                > .control-label
+                  display: none
+                .product-quantity
+                  width: 100%
+                  display: flex
+                  flex-direction: column
+                  .qty
+                    float: none
+                    width: 100%
+                    display: block
+                    margin: 0px auto
+                    z-index: 0
+                    .input-group
+                      width: 100%
+                      display: block
+                      position: relative
+                      input#quantity_wanted
+                        width: 100%
+                        text-align: center
+                        position: relative
+                        font-weight: 500
+                        font-size: 30px
+                      .input-group-btn-vertical
+                        position: absolute
+                        width: 100%
+                        float: none
+                        height: 100%
+                        .btn.btn-touchspin
+                          position: absolute
+                          width: auto
+                          top: 0
+                          z-index: 999
+                          background: none
+                          border: none
+                          height: 100%
+                          &.bootstrap-touchspin-up
+                            right: 1.5rem
+                          &.bootstrap-touchspin-down
+                            left: 1rem
+                          .material-icons
+                            top: 20%
+                            font-family: $fontIcon
+                            font-weight: 500
+                            font-size: 30px
+                            &.touchspin-down
+                              &::after
+                                content: '\e91c'
+                            &.touchspin-up
+                              &::after
+                                content: '\e91b'
+                  .add
+                    margin-top: 24px
+                    .btn.btn-primary
+                      width: 100%
+                      box-sizing: border-box
+                  #quantity_wanted
+                    margin-top: 0px
+                  #product-availability, .product-minimal-quantity
+                    font-weight: 500
+                    font-size: 15px
+              .blockreassurance_product
+                font-size: 15px
+                font-family: $font2
+                font-weight: 500
+                color: $primary
+                margin: 0px auto
+                width: 100%
+                box-sizing: border-box
+                > div
+                  display: flex
+                  align-items: center
+                p
+                  font-size: 15px
+                  font-family: $font2
+                  font-weight: 500
+                  color: $primary
+                  margin: 0px
+                  padding: 0px
+                .item-product
+                  width: 20px
+                  height: 20px
+                  padding: 0px
+                  svg, img
+                    color: $primary
+                    max-height: 20px
+                    max-width: 20px
+                    path
+                      fill: rgb(0, 0, 0) !important
+              .product-additional-info
+                width: 100%
+                box-sizing: border-box
+                margin: 0px auto
+                .social-sharing
+                  margin: 0px auto
+                  li
+                    height: 30px
+                    width: 30px
+                    line-height: 30px
+                    font-size: 30px
+                  li.facebook
+                    margin-left: 0px
+                  li.pinterest
+                    font-size: 21px
+                    text-indent: 2px
+        .product-features
+          margin: 0px
+          box-sizing: border-box
+          .featureds-icons
+            list-style: none
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            margin: 0px auto
+            .iconmoon
+              font-size: 50px
+              margin-right: 10px
+              z-index: 0
+              &:last-child
+                margin-right: 0px
+              &.gluten
+                color: #E5B839
+                &::before
+                  //content: '\e93a'
+                  content: '\e925'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.lactosa
+                color: #5f8fc2
+                &::before
+                  //content: '\e93c'
+                  content: '\e927'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.azucar
+                color: #87C161
+                &::before
+                  //content: '\e90a'
+                  content: '\e914'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.sesamo
+                color: #489F9B
+                &::before
+                  //content: '\e93d'
+                  content: '\e928'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.soja
+                color: #8DBD70
+                &::before
+                  //content: '\e93e'
+                  content: '\e929'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.sulfitos
+                color: #59BBED
+                &::before
+                  //content: '\e93f'
+                  content: '\e92a'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.huevo
+                color: #eba545
+                &::before
+                  //content: '\e93b'
+                  content: '\e926'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.frutosdecascara
+                color: #c09f73
+                &::before
+                  //content: '\e913'
+                  content: '\e924'
+                  background: #FBFAF7
+                  border-radius: 50%
+              &.cacahuetes
+                color: #c09f73
+                &::before
+                  //content: '\e90e'
+                  content: '\e923'
+                  background: #FBFAF7
+                  border-radius: 50%
+        .other-product-features
+          margin-bottom: 5px
+          .other-featured
+            display: flex
+            align-items: center
+            color: $negro
+            font-size: 15px
+            font-weight: 500
+            span
+              &:first-child
+                margin-right: 5px
+      .tabs
+        background: none
+        margin: 0px auto
+        width: 100%
+        max-width: $max-width
+        box-shadow: none
+        display: block
+        h3
+          font-size: 25px
+          font-family: $font2
+          color: $primary
+          font-weight: bold
+          margin: 0px auto
+          padding: 2rem 0px
+          width: 100%
+          display: block
+          z-index: 9
+          position: relative
+          cursor: pointer
+          &::before
+            left: 1rem
+            background: rgba(0,0,0,0.2)
+            display: block
+            height: 3px
+            width: calc(100% - 1.5rem)
+            position: absolute
+            content: ''
+            top: 0
+          &::after
+            content: '\e912'
+            font-family: $fontIcon
+            color: $negro
+            position: absolute
+            right: 2rem
+            font-size: 20px
+            transition: .3s
+            transform: rotate(0deg)
+          &:first-child
+            &::before
+              display: none
+          &.visible
+            &::after
+              transform: rotate(90deg)
+        .box-content
+          width: 100%
+          margin: 0px auto
+          max-width: 85%
+          max-height: 0px
+          opacity: 0
+          transition: all .8s
+          &.visible
+            max-height: 3000px
+            opacity: 1
+            margin-bottom: 50px
+      .product-accessories
+        background: $white
+        margin: 0px auto
+        width: 100%
+        box-shadow: none
+        display: block
+        position: relative
+        z-index: 3
+        .h5.text-uppercase
+          text-transform: inherit !important
+          font-size: 32px
+          font-weight: 400
+          font-family: $font1
+          color: $primary
+          margin: 0px auto
+          width: 100%
+          max-width: $max-width
+          padding: 54px 0px 53px 0px
+        .products
+          margin: 0px auto 100px
+          width: 100%
+          max-width: $max-width
+        .slick-slider
+          .slick-list
+            width: 100%
+            .slick-track
+              display: flex
+              article
+                //max-width: calc(100vw/5)
+.quickview
+  .modal-content
+    border-radius: 0px
+    background: $white
+    .modal-header
+      border: none
+      .close
+        color: $primary
+    .modal-body
+      .images-container
+        img
+          box-shadow: none
+      .product-price
+        font-size: 30px
+      .product-quantity #quantity_wanted
+        margin-top: 0px
+      .product-actions form
+        align-items: center
+    .modal-footer
+      display: none
+#product-modal
+  .modal-content
+    .modal-body
+      .product-images
+        img
+          &:hover
+            border: 1px solid $tertiary
+        > li.thumb-container > .thumb.selected, > li.thumb-container > .thumb:hover
+          border: 1px solid $tertiary
+      .image-caption
+        display: none
+#blockcart-modal
+  .modal-dialog
+    background: url(../img/fondo.png) 0 0 transparent
+    background-blend-mode: multiply
+    //background-size: 100% 100%
+    .modal-header
+      border: none
+      .modal-title
+        color: $primary
+    .modal-body
+      padding: 1rem 1.5rem
+      > .row
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        .divide-right
+          color: $negro
+          .product-name
+            color: $primary
+          strong
+            font-weight: 500
+        .cart-content
+          color: $negro
+          .cart-products-count
+            color: $sixth
+          .product-total
+            background: $fourth
+          .cart-content-btn
+            .btn-primary
+              .material-icons
+                display: none
+            .btn-secondary
+              background: #ccc
+//buscador
+#module-ambjolisearch-jolisearch, #search
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 20%
+        position: absolute
+        top: 0
+        left: 0
+      #js-product-list-header
+        position: relative
+        margin: 56px auto
+        width: 100%
+        max-width: $max-width
+      #products
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        .products
+          article
+            max-width: 100%
+            flex-basis: 22%
+        .pagination
+          color: $negro
+          .page-list
+            box-shadow: none
+            background: none !important
+            padding: 0px
+            margin-right: 20px
+            a
+              font-weight: 400
+            .current
+              color: $tertiary
+              a
+                color: $tertiary
+                font-weight: 500
+//contacto
+.page-contact
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      padding-bottom: 50px
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 50%
+        position: absolute
+        top: 0
+        left: 0
+      .page-content
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        padding: 0px
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        background: none
+        .content-title
+          width: 100%
+          margin: 0px auto 20px
+          display: block
+        .content-full
+          width: 100%
+          margin: 0px auto 40px
+          display: block
+        .contact-page-content
+          width: 100%
+          display: flex
+          justify-content: space-between
+          .col
+            flex-basis: 48%
+            img
+              max-width: 100%
+              height: 100%
+              object-fit: cover
+              object-position: right
+        .pfg-forms
+          background: #F6F5F1
+          border: 1px solid #DEDEDE
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+          padding: 2.5rem 2rem
+          h3
+            width: 100%
+            font-size: 25px
+            margin-bottom: 15px
+          fieldset
+            width: 90%
+            margin: 0px auto
+            .form-group
+              display: flex
+              flex-direction: column
+              margin: 0px auto
+              label
+                font-size: 15px
+                margin: 0px
+                padding: 0px
+                width: 100%
+                text-align: left
+                font-weight: 500
+                font-family: $font2
+              input, textarea
+                background: $white
+                border-radius: 2px
+              textarea
+                max-height: 120px
+              > div
+                padding: 0px
+                width: 100%
+            #gdpr_consent
+              margin: 10px auto 20px
+            .submit
+              .btn.btn-primary
+                border-radius: 0px
+                text-transform: inherit
+                span
+                  text-transform: inherit
+        .contact-form
+          color: $negro
+          padding: 0px
+          margin: 50px auto
+          h1
+            margin: 0px auto 30px
+          form
+            display: flex
+            flex-direction: column
+            label
+              color: $negro
+              font-size: 17px
+              &.btn
+                font-size: 14px
+                padding: 0px
+                text-transform: inherit
+                line-height: 36px
+                min-height: 36px
+                top: 2px
+                padding-left: 5px
+                padding-right: 5px
+//page
+#cms
+  .breadcrumb
+    display: none
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 50%
+        position: absolute
+        top: 0
+        left: 0
+      .page-header
+        width: 100%
+        max-width: $max-width
+        margin: 50px auto 30px
+        padding: 0px
+        position: relative
+      .page-content
+        position: relative
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        padding: 0px
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        background: $white
+        padding: 1em
+        &.page-cms-8, &.page-cms-9, &.page-cat-2
+          padding: 0em 0em 40px 0em
+          background: none
+        .contenido-full
+          width: 100%
+          margin: 0px auto 40px
+          display: block
+        .contenido-mitad
+          width: 100%
+          display: flex
+          justify-content: space-between
+          .col-mitad
+            flex-basis: 48%
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+            &:last-child
+              overflow: hidden
+          //.cms-collage
+            display: grid
+            height: 100%
+            width: 100%
+            grid-template-columns: repeat(3,1fr)
+            grid-template-rows: repeat(auto-fit,minmax(211px,50%))
+            grid-auto-flow: row dense
+            grid-gap: 0px
+            img
+              object-fit: contain
+              width: 100%
+              height: 100%
+              &:first-child, &:nth-child(5n)
+                grid-column-end: span 3
+          .cms-collage
+            display: flex
+            width: 100%
+            flex-wrap: wrap
+            height: 100%
+            img
+              object-fit: cover
+              width: 100%
+              height: 50%
+              width: 33.333333%
+              &:first-child
+                width: 100%
+        .store-view-single
+          .contenido-full
+            width: 100%
+            display: block
+            margin: 20px auto 40px
+          .contenido-mitad
+            width: 100%
+            display: flex
+            margin: 0px auto
+            justify-content: space-between
+            .col-mitad
+              &.information
+                display: flex
+                flex-direction: column
+                img
+                  object-fit: contain
+                  max-width: 100%
+                  width: auto
+                  height: auto
+            .info
+              background: #F6F5F1
+              border: 1px solid #DEDEDE
+              box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+              display: flex
+              justify-content: space-between
+              align-items: center
+              padding: 1rem 1rem
+              .col
+                &:first-child
+                  flex-basis: 40%
+                  text-align: center
+                &:last-child
+                  flex-basis: 60%
+                span
+                  font-weight: bold
+                  font-size: 15px
+                  margin: 0px auto
+                  width: 100%
+                  display: block
+                p
+                  margin: 0px auto 5px
+                  font-size: 15px
+                  padding: 0px
+                  width: 100%
+                  display: block
+                  text-indent: 10px
+                  a
+                    color: $negro
+                    text-decoration: none
+                    transition: .3s
+                    &:hover
+                      color: $tertiary
+                      text-decoration: underline
+            .maps
+              width: 100%
+              margin: 20px auto 0px
+              padding: 0px auto
+              iframe
+                width: 100%
+                margin: 0px auto
+          .contenido-final
+            width: 100%
+            margin: 30px auto
+            display: flex
+            justify-content: center
+            align-items: center
+            a
+              color: $primary
+              margin: 0px
+              position: relative
+              &:first-child
+                margin-right: 10px
+                padding-right: 10px
+                &::after
+                  position: absolute
+                  content: ''
+                  height: 80%
+                  width: 1px
+                  background: $primary
+                  bottom: 0
+                  right: 0
+              &:hover
+                color: $secondary
+      ul
+        padding-left: 1rem
+      .columns2
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        display: flex
+        margin: 20px auto
+        .col
+          flex-basis: 48%
+      .full-claim
+        color: $fifth
+        width: 100%
+        display: block
+        margin: 50px auto
+        font-family: $font1
+        font-style: italic
+        font-size: 1.3rem
+        text-align: center
+      iframe
+        max-width: 100%
+        display: block
+        margin: 20px auto
+        text-align: center
+        border-radius: 2px
+      img
+        max-width: 100%
+        height: auto
+      .testimonials
+        font-style: italic
+        color: $primary
+  &.cms-id-8, &.cms-id-9
+    #content-wrapper
+      #main
+        &::before
+          height: 50%
+//carrito
+#cart
+  #wrapper
+    #content-wrapper
+      #main
+        background: url(../img/fondo.png) 0 0 transparent
+        background-blend-mode: multiply
+        //background-size: 100% 100%
+        width: 100%
+        position: relative
+        &::before
+          content: ''
+          width: 100%
+          background: $white
+          height: 20%
+          position: absolute
+          top: 0
+          left: 0
+      .separator
+        display: none
+      #main
+        > .cart-grid
+          display: flex
+          width: 100%
+          max-width: $max-width
+          flex-direction: row
+          justify-content: space-between
+          margin: 0px auto
+          padding: 50px 0px
+          .cart-grid-body
+            width: 100%
+            flex-basis: 72%
+            padding: 0px
+            margin: 0px auto
+            float: none
+            a.label
+              &:hover
+                color: $tertiary
+            .cart-overview
+              padding: 0px
+              .product-line-grid
+                .product-price
+                  font-family: $font2
+                  .regular-price
+                    font-size: 15px
+                  .price
+                    color: $tertiary
+                    font-family: $font2
+                    font-weight: 500
+          .cart-grid-right
+            width: 100%
+            flex-basis: 24%
+            padding: 0px
+            margin: 0px auto
+            float: none
+            .cart-summary
+              background: $white
+            .card-block.cart-summary-totals
+              background: $fourth
+              border-radius: 2px
+              .cart-total
+                .value
+                  font-weight: 600
+              .cart-summary-line.cart-total
+                background: $fourth
+      ul
+        list-style: none
+      .featured-products
+        width: 100%
+        display: block
+        max-width: $max-width
+        margin: 20px auto
+//checkout
+body#checkout
+  a
+    &:hover
+      color: $tertiary
+  #header
+    padding-top: 20px
+    .header-nav
+      display: none
+  #footer
+    background: url(../img/fondo.png) repeat 0 0 $bgfooter
+    background-blend-mode: multiply
+    //background-size: 100% 100%
+    width: 100%
+    margin: 0px auto
+    padding: 0px
+    .psgdpr_consent_message span:last-child
+      flex: auto
+  #main
+    max-width: $max-width
+    width: 100%
+    margin: 0px auto !important
+    #onepagecheckoutps
+      .address_card
+        ul
+          list-style: none
+      h5
+        color: $primary
+      #btn-logout
+        line-height: normal
+        min-height: 15px
+      #panel_addresses_customer .card .card-header a
+        font-weight: 500
+      label
+        font-size: 17px
+        margin-top: 5px
+        margin-bottom: 5px
+      input, textarea, select
+      font-size: 16px
+      .product-price
+        font-size: 15px
+      .order_total_items
+        .price
+          font-weight: 600
+      #btn_place_order
+        i
+          display: none !important
+    .product-price
+      color: $sixth
+      font-size: 16px
+  #onepagecheckoutps
+    #onepagecheckoutps_contenedor
+      #onepagecheckoutps_step_one_container
+        #onepagecheckoutps_step_one
+          .onepagecheckoutps_p_step.onepagecheckoutps_p_step_one
+            display: flex
+            align-items: center
+          #customer_container
+            #form_customer
+              #field_customer_firstname, #field_customer_lastname
+                width: 100%
+          #panel_addresses_customer
+            #field_delivery_firstname, #field_delivery_lastname
+              width: 100%
+          #gdpr_consent
+            border: 1px solid $tertiary
+            border-radius: 2px
+            text-align: center
+      #onepagecheckoutps_step_three
+        .module_payment_container
+          .pts-vcenter
+            display: flex !important
+            align-items: center
+    #opc_modal
+      #form_login
+        .input-group-addon
+          border: none
+        #btn_login
+          margin-top: 20px
+.block-promo .promo-input + button
+  border: none !important
+//mi cuenta
+#authentication
+  > main
+    background: url(../img/bg-authentication.jpg) 0 0 transparent
+    width: 100%
+    .breadcrumb
+      display: none !important
+    > #wrapper
+      background: none
+      #main
+        background: rgba(255, 255, 255, 0.8)
+        //background-size: 100% 100%
+        width: 100%
+        position: relative
+        padding: 0px
+        max-width: 630px
+        margin: 80px auto
+        display: block
+        text-align: center
+        padding: 1rem
+        &::before
+          display: none
+        .page-header
+          background: none
+          max-width: 100%
+          margin: 50px auto 20px
+        .page-content
+          background: none
+          max-width: 100%
+          box-shadow: none
+          padding: 0px
+          margin: 0px auto
+          text-align: center
+          #login-form
+            justify-content: center
+            align-content: center
+            .form-group
+              margin-bottom: 0px
+              label
+                font-size: 18px
+                font-weight: 500
+                width: 40%
+                padding: 0px
+                margin: 0px
+                height: 34px
+                line-height: 34px
+              input
+                height: 34px
+                line-height: 34px
+                border: none
+                border-radius: 2px
+                margin: 0px auto
+              .input-group
+                display: flex
+                .input-group-btn
+                   > .btn[data-action="show-password"]
+                      background: none
+                      position: relative
+                      font-size: 0px
+                      font-family: $fontIcon
+                      font-size: 0px
+                      &::after
+                        content: '\e922'
+                        width: 30px
+                        height: 30px
+                        color: $negro
+                        font-size: 28px
+                        position: absolute
+                        top: 0
+                      &.show
+                        &::after
+                          content: '\e921'
+            .forgot-password
+              padding: 0px
+              margin: 0px
+              a
+                color: $negro
+                font-size: 12px
+                transition: .3s
+                &:hover
+                  color: $tertiary
+            #submit-login
+              text-transform: inherit
+              border-radius: 0px
+              margin-top: 30px
+          hr
+            border: none
+            background: $secondary
+            height: 1px
+            opacity: 0.8
+            max-width: 50%
+        .no-account
+          a
+            color: $negro
+  #onepagecheckoutps
+    max-width: $max-width
+    margin: 0px auto
+    #field_customer_passwd, #field_customer_conf_passwd
+      display: block !important
+    #onepagecheckoutps_contenedor
+      margin-top: 30px
+      #onepagecheckoutps_step_one
+        .onepagecheckoutps_p_step
+          margin: 20px auto 40px !important
+          color: $primary
+          border: none
+          font-family: $font2
+          font-weight: 500
+          font-size: 32px
+          i
+            font-size: 30px
+        #form_customer
+          > .row
+            margin-bottom: 10px
+          div.form-group
+            label
+              color: $negro
+            input, textarea, select
+              width: 100%
+              border: none
+              padding: 10px 0px
+              text-indent: 20px
+              margin-bottom: 10px
+              font-family: $font2
+              font-size: 15px
+              border-radius: 2px
+              background-color: #f9f9f9
+              margin-top: 5px
+              transition: .3s
+              &.error
+                border-radius: 1px solid #ff0000
+              &:focus
+                outline: 1px solid $tertiary !important
+                border: none !important
+            textarea
+              resize: none
+            input[type="submit"], input[type="checkbox"], input[type="radio"]
+              width: auto
+              &:focus
+                outline: 1px solid $tertiary
+        .gdpr_consent
+          margin: 20px auto
+        #btn_save_customer
+          max-width: 250px
+          margin: 30px auto
+  #login-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    input[name="password"]
+      margin-top: 0px
+      outline: none !important
+    input[name="email"]
+      //min-width: 250px
+body.page-customer-account, body.page-my-account
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      padding-bottom: 50px
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 20%
+        position: absolute
+        top: 0
+        left: 0
+      .page-header
+        width: 100%
+        max-width: $max-width
+        margin: 50px auto 30px
+        padding: 0px
+        position: relative
+      .page-content
+        position: relative
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        padding: 0px
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        box-shadow: none !important
+        background: $white
+        padding: 1em
+        .links
+          a
+            color: $primary
+            span
+              &.link-item
+                box-shadow: none
+            i
+              color: $primary
+              transition: .3s
+            &:hover
+              color: $tertiary
+              i
+                color: $tertiary
+      .page-footer
+        width: 100%
+        max-width: $max-width
+        margin: 20px auto
+        .btn
+          margin-top: 20px
+#my-account
+  #content
+    .links
+      > li
+        display: none
+        #author-blog-info-link, #author-blog-comment-link
+          display: none
+#identity, #addresses
+  #onepagecheckoutps
+    width: 100%
+    margin: 0px auto
+    max-width: $max-width
+    input, textarea, select
+      font-size: 16px
+    label
+      font-size: 16px
+      margin-top: 5px
+      margin-bottom: 5px
+    #btn_save_customer
+      max-width: 260px
+      margin-top: 20px !important
+    .onepagecheckoutps_p_step
+      color: $primary
+      margin: 10px auto 30px !important
+#addresses
+  .card
+    .card-body
+      .address_card
+        .container_card
+          padding: 1rem
+          #address_card_new_content
+            position: relative
+            top: -0.5rem
+          .header_card
+            margin-bottom: 20px
+            span
+              font-size: 18px
+              font-weight: 600
+              color: $primary
+          .content_card
+            ul
+              list-style: none
+              padding-left: 1rem
+              font-size: 16px
+          .footer_card
+            margin: 20px auto
+            button
+              min-width: 160px
+              border-radius: 2px
+              min-height: 45px
+              line-height: 45px
+              background: $primary
+              color: $white
+              font-weight: 500
+              font-family: $font2
+              font-size: 15px
+              text-transform: uppercase
+              transition: .3s
+              text-align: center
+              padding: 0
+              margin: 0 auto
+              box-shadow: none
+              &:hover
+                background: $secondary
+  #btn_cancel_address_invoice, #btn_cancel_address_delivery
+    margin-bottom: 30px
+#address
+  .address-form
+    form
+      display: flex
+      flex-direction: column
+      .form-footer
+        text-align: left
+        .float-xs-right
+          float: none !important
+//detalle de pedido en zona cliente
+#order-detail
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      padding-bottom: 50px
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 20%
+        position: absolute
+        top: 0
+        left: 0
+      .page-header
+        width: 100%
+        max-width: $max-width
+        margin: 50px auto 30px
+        padding: 0px
+        position: relative
+      .page-content
+        position: relative
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        padding: 0px
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        background: $white
+        padding: 1em
+        h2
+          margin: 30px auto 30px
+        .box
+          box-shadow: none !important
+          ul
+            padding-left: 2rem
+          .addresses
+            addresses
+              line-height: 1.5
+          form
+            display: flex
+            flex-direction: column
+          .button-primary
+            display: block
+            min-width: 160px
+            border-radius: 2px
+            min-height: 45px
+            line-height: 45px
+            background: $tertiaryButton
+            color: $white
+            font-weight: 500
+            font-family: $font2
+            font-size: 15px
+            text-transform: uppercase
+            transition: .3s
+            text-align: center
+            padding: 0px
+            margin: 0px auto
+            box-shadow: none
+            &:hover
+              background: $secondary
+      .page-footer
+        width: 100%
+        max-width: $max-width
+        margin: 20px auto
+        .btn
+          margin-top: 20px
+#module-ps_emailalerts-account
+  #content-wrapper
+    #main
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      padding-bottom: 50px
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 20%
+        position: absolute
+        top: 0
+        left: 0
+      .page-header
+        width: 100%
+        max-width: $max-width
+        margin: 50px auto 30px
+        padding: 0px
+        position: relative
+      .page-content
+        position: relative
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        padding: 0px
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        background: $white
+        padding: 1em
+        h2
+          margin: 30px auto 30px
+      .page-footer
+        width: 100%
+        max-width: $max-width
+        margin: 20px auto
+        .btn
+          margin-top: 20px
+//stores
+#stores
+  .breadcrumb
+    display: none
+  #content-wrapper
+    #main
+      width: 100%
+      position: relative
+      background: $white
+      .page-header
+        width: 100%
+        max-width: $max-width
+        margin: 50px auto 30px
+        padding: 0px
+        position: relative
+      .page-content
+        position: relative
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        //box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05)
+        background: $white
+        padding: 0em
+        .city
+          width: 100%
+          display: block
+          margin: 30px auto 20px
+          font-family: $font1
+          font-size: 32px
+          font-size: 500
+          text-align: center
+          text-transform: capitalize
+        .stores
+          display: flex
+          flex-flow: row wrap
+          padding: 0em
+          position: relative
+          &::after
+            position: absolute
+            content: ''
+            width: 236px
+            margin: 0px auto
+            bottom: 0
+            background: $secondary
+            height: 1px
+            left: 50%
+            transform: translateX(-50%)
+          &:last-child
+            &::after
+              display: none
+          article
+            flex: auto
+            .store-item-container
+              margin: 0px auto
+              padding: 0px
+              position: relative
+              display: flex
+              flex-direction: column
+              justify-content: center
+              .store-picture
+                width: 100%
+                height: 100%
+                transition: .3s
+                overflow: hidden
+                img
+                  width: 100%
+                  //height: 100%
+                  object-fit: cover
+                  transition: 1s
+                  height: 266px
+              .store-description
+                position: relative
+                width: 100%
+                color: $negro
+                text-align: center
+                transition: .3s
+                font-size: 18px
+                font-weight: 500
+                margin: 13px auto
+                .h3
+                  color: $secondary
+                address
+                  margin: 0px auto 4px
+                  width: 350px
+                a
+                  color: $primary
+                  position: relative
+                  font-size: 18px
+                  font-family: $font2
+                  font-weight: 500
+                  &::after
+                    position: absolute
+                    content: ''
+                    bottom: -4px
+                    left: 0
+                    width: 100%
+                    height: 2px
+                    background: $primary
+                    transition: .3s
+                  &:hover
+                    color: $secondary
+                    &::after
+                      background: $secondary
+            &:hover
+              .store-picture
+                img
+                  mix-blend-mode: inherit
+                  transform: scale(1.1)
+              .store-description
+                background: rgba(255,255,255,0.5)
+                border-radius: 2px
+                color: $negro
+                .h3
+                  color: $negro
+          &.style-1
+            article
+              flex-basis: 100%
+          &.style-2
+            article
+              flex-basis: 50%
+          &.style-3
+            article
+              flex-basis: 30%
+          &.style-4
+            article
+              flex-basis: 23%
+          &.style-5
+            article
+              flex-basis: 18%
+
+//confirmación de pedido
+#order-confirmation
+  #wrapper
+    #content-wrapper
+      #main
+        #content-hook_order_confirmation
+          width: 100%
+          max-width: $max-width
+          margin: 0px auto
+        .page-content
+          width: 100%
+          max-width: $max-width
+          margin: 0px auto
+          #order-details ul
+            padding-left: 20px
+        #content-hook_payment_return
+          width: 100%
+          max-width: $max-width
+          margin: 0px auto
+        #content-hook-order-confirmation-footer
+          width: 100%
+          max-width: $max-width
+          margin: 0px auto
+          .featured-products
+            display: flex
+            flex-direction: column
+            justify-content: center
+            width: 100%
+            .products-section-title
+              margin: 20px auto
+              width: 100%
+              text-align: center
+            .slick-slider
+              .slick-list
+                width: 100%
+                .slick-track
+                  width: 100% !important
+    .featured-products
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 100%
+      .products-section-title
+        margin: 20px auto
+        width: 100%
+        text-align: center
+      .slick-slider
+        .slick-list
+          width: 100%
+          .slick-track
+            width: 100%
+//blog
+#ybc_blog_page
+  #wrapper
+    .container
+      background: url(../img/fondo.png) 0 0 transparent
+      background-blend-mode: multiply
+      //background-size: 100% 100%
+      width: 100%
+      position: relative
+      &::before
+        content: ''
+        width: 100%
+        background: $white
+        height: 20%
+        position: absolute
+        top: 0
+        left: 0
+      .content-inner
+        width: 100%
+        max-width: $max-width
+        margin: 0px auto
+        #left-column
+          .block
+            box-shadow: none
+          .title_blog
+            display: block
+            font-weight: 500
+            font-family: $font2
+      #content-wrapper
+        .blog-extra-facebook-share
+          li
+            a
+              width: 34px
+              min-width: 34px
+  .ybc-blog-slider.slider-wrapper
+    .slick-arrow
+      background: none
+      &::before
+        color: $negro
+        font-size: 50px
+        font-weight: 600
+.ybc-blog-latest-toolbar
+  color: #878787
+
+.carousel-item
+  .caption
+    .display-1
+      text-align: center
+      margin: 20px 0
+    .caption-description
+      font-size: 38px
+      padding: 10px
+      border: 1px solid #fff
+
+#ybc-blog-related-products
+  .title_blog
+    text-transform: inherit!important
+    font-size: 32px
+    font-weight: 400
+    font-family: "Yeseva One",cursive
+    color: #141E29
+    margin: 0 auto
+    width: 100%
+    max-width: 1200px
+    margin-bottom: 20px
+  .content_price .bp-price-display
+    font-size: 25px
+    color: #141E29
+    font-weight: 500
+  .right-block h5 a
+    font-size: 13px
+    font-family: "Barlow",sans-serif
+    text-transform: uppercase
+    color: #141E29
+    font-weight: 500
+#feder
+  width: 100%
+  max-width: 765px
+  margin-right: 0
+  margin-left: auto
+  p
+    margin-top: 0
+  .images
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    width: 100%
+#delivery_address_container
+  a.btn, .btn.btn-primary
+    min-width: auto
+#module-codfee-payment
+  #main .page-content > form
+    flex-direction: column
+    align-items: center
+    margin: 0px auto
+    max-width: $max-width
+    align-content: center
+    .cart_navigation .btn
+      margin-top: 1rem
+
+
+#ybc_blog_page #indice_entradas
+  list-style: decimal
+  padding: 10px
+  padding-right: 50px
+  border: 1px solid #AAAAAA
+  border-radius: 4px
+  display: inline-block
+  position: relative
+  transition: all 1s linear
+  overflow: hidden
+  .titulo
+    font-weight: bold
+    font-size: 20px
+    line-height: 20px
+    margin-bottom: 10px
+  .open
+    padding: 3px
+    position: absolute
+    right: 10px
+    top: 9px
+    cursor: pointer
+    transition: all .3s linear
+    &::before
+      content: "-"
+      font-size: 25px
+      font-weight: bold
+      color: $secondary
+      height: 15px
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: all .3s linear
+    &::after
+      content: "+"
+      display: none
+      font-size: 25px
+      font-weight: bold
+      color: $secondary
+      height: 15px
+      justify-content: center
+      align-items: center
+      transition: all .3s linear
+  & > ol
+    margin-bottom: 0
+    padding-left: 0
+  ol
+    padding-left: 14px
+    list-style: none
+    transition: all .3s linear
+    counter-reset: item
+    li
+      list-style: decimal
+      list-style: none
+      &::marker
+        font-weight: bold
+      a
+        font-size: 16.15px
+        font-weight: 600
+        line-height: 25.84px
+        color: $negro
+        &:hover
+          color: $negro
+          border-bottom: 1px solid $negro
+        &::before
+          content: counters(item, ".") ". "
+          display: inline-block
+          counter-increment: item
+          margin-right: 0.2em
+  &.cerrado
+    max-height: 45px
+    .open
+      &::before
+        display: none
+      &::after
+        display: flex
+
+//responsive
+@import '_responsive.sass'

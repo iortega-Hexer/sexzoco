@@ -1,0 +1,20 @@
+{
+    "name": "reduxweb/advancedemailguard",
+    "description": "PrestaShop Module",
+    "require": {
+        "ramsey/array_column": "^1.1",
+        "jasongrimes/paginator": "^1.0"
+    },
+    "require-dev": {
+        "prestashop/php-dev-tools": "^4.2",
+        "deeplcom/deepl-php": "^0.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ReduxWeb\\AdvancedEmailGuard\\": "app/"
+        }
+    },
+    "config": {
+        "prepend-autoloader": false
+    }
+}

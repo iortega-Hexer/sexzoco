@@ -1,0 +1,38 @@
+.pfg-forms p.radio>label, .pfg-forms p.checkbox>label {
+	display:inline-block;
+	padding:6px 15px;
+	width:150px;/* 180 */
+	font-size:12px;
+	text-align:right;
+	float: left;
+	vertical-align:top;
+}
+
+.pfg-forms p.radio span {
+	display: block;
+	margin-left: 180px;
+}
+
+.pfg-forms p.radio span>label {
+	display: block;
+	padding: 2px 0;
+}
+
+.pfg-forms p.checkbox label.input {
+	display: block;
+	padding: 2px 0;
+	text-align: left;
+	width: auto;
+	display: block;
+}
+
+.pfg-forms p.radio input, .pfg-forms p.checkbox input {
+	padding: 0 5px;
+	border:1px solid #ccc;
+	font-size: 12px;
+	color:#666
+}
+
+.pfg-forms p.submit {clear: both;}
+
+.pfg-forms input.form-control {max-width: inherit;}

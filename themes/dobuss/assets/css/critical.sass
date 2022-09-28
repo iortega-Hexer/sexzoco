@@ -1,0 +1,943 @@
+@import '_definiciones.sass'
+
+$media-breakpoint-up-xss: 350px
+$media-breakpoint-up-xs: 450px
+$media-breakpoint-up-xms: 510px
+$media-breakpoint-up-ms: 600px
+$media-breakpoint-up-md: 800px
+$media-breakpoint-up-lg: 992px
+$media-breakpoint-up-lmg: 1030px
+$media-breakpoint-up-lm: 1160px
+$media-breakpoint-up-xl: 1240px
+$media-breakpoint-up-xx: 1400px
+
+
+=break-up($breakpoint)
+  @if $breakpoint == xss
+    @media (min-width: $media-breakpoint-up-xss)
+      @content
+
+  @if $breakpoint == xs
+    @media (min-width: $media-breakpoint-up-xs)
+      @content
+
+  @if $breakpoint == xms
+    @media (min-width: $media-breakpoint-up-xms)
+      @content
+
+  @if $breakpoint == ms
+    @media (min-width: $media-breakpoint-up-ms)
+      @content
+
+  @if $breakpoint == md
+    @media (min-width: $media-breakpoint-up-md)
+      @content
+
+  @if $breakpoint == lg
+    @media (min-width: $media-breakpoint-up-lmg)
+      @content
+
+  @if $breakpoint == lmg
+    @media (min-width: $media-breakpoint-up-lg)
+      @content
+
+  @if $breakpoint == lm
+    @media (min-width: $media-breakpoint-up-lm)
+      @content
+
+  @if $breakpoint == xl
+    @media (min-width: $media-breakpoint-up-xl)
+      @content
+
+  @if $breakpoint == xx
+    @media (min-width: $media-breakpoint-up-xx)
+      @content
+
+//función para agregar fuentes
+=font-face($name, $path, $filename, $weight: null, $style: null, $exts: ttf)
+	$src: null
+
+	$extmods: (eot: "?", svg: "#" + str-replace($filename, " ", "_"))
+
+	$formats: (ttf: "truetype")
+
+	@each $ext in $exts
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext)
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext)
+		$src: append($src, url(quote($path + "/" + $filename + "." + $extmod)) format(quote($format)), comma)
+
+
+	@font-face
+    font-family: quote($name)
+    font-style: $style
+    font-weight: $weight
+    font-display: swap
+    src: $src
+
+
+//FUENTES
+//+font-face($font1Name, "fonts", YesevaOne-Regular, 400, normal)
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap')
++font-face($font2Name, "fonts", Barlow-Black, 900, normal)
++font-face($font2Name, "fonts", Barlow-BlackItalic, 900, italic)
++font-face($font2Name, "fonts", Barlow-ExtraBold, 800, normal)
++font-face($font2Name, "fonts", Barlow-ExtraBoldItalic, 800, italic)
++font-face($font2Name, "fonts", Barlow-Bold, 700, normal)
++font-face($font2Name, "fonts", Barlow-BoldItalic, 700, italic)
++font-face($font2Name, "fonts", Barlow-SemiBold, 600, normal)
++font-face($font2Name, "fonts", Barlow-SemiBoldItalic, 600, italic)
++font-face($font2Name, "fonts", Barlow-Medium, 500, normal)
++font-face($font2Name, "fonts", Barlow-MediumItalic, 500, italic)
++font-face($font2Name, "fonts", Barlow-Regular, 400, normal)
++font-face($font2Name, "fonts", Barlow-Italic, 400, italic)
++font-face($font2Name, "fonts", Barlow-Light, 300, normal)
++font-face($font2Name, "fonts", Barlow-LightItalic, 300, italic)
++font-face($font2Name, "fonts", Barlow-ExtraLight, 200, normal)
++font-face($font2Name, "fonts", Barlow-ExtraLightItalic, 200, italic)
++font-face($font2Name, "fonts", Barlow-Thin, 100, normal)
++font-face($font2Name, "fonts", Barlow-ThinItalic, 100, italic)
++font-face($fontIconName, "fonts", icomoon, 400, normal)
+//CÓDIGO SASS
+*:focus
+  outline: 0
+body, html
+  font-family: $font2
+  font-size: 17px
+  font-weight: 400
+  margin: 0px auto
+  padding: 0px
+  line-height: 1.27
+  color: $negro
+  text-rendering: optimizeSpeed
+header, nav, main, section, article, aside, figure, footer, input, select, textarea, option, button, div, a, span
+  box-sizing: border-box
+a, button, select, input, textarea, :focus, :active
+  outline: 0
+p
+  color: $negro
+  font-size: 17px
+body
+  b, strong
+    font-weight: 600
+  a
+    color: $secondary
+    text-decoration: none
+    transition: .3s
+    outline: none
+    &:hover, &:focus
+      color: $tertiary
+h1, .h1
+  color: $negro
+  font-size: 32px
+  font-weight: 400
+  width: 100%
+  margin: auto
+  font-family: $font1
+  text-transform: inherit
+h2, .h2
+  color: $primary
+  font-size: 28px
+  font-weight: 400
+  font-family: $font1
+  text-transform: inherit
+h3, .h3
+  color: $primary
+  font-size: 24px
+  font-family: $font1
+  text-transform: inherit
+  font-weight: 400
+h4, .h4
+  color: $secondary
+  font-size: 20px
+  font-weight: 500
+  text-transform: inherit
+h5, .h5
+  color: $secondary
+  font-weight: 400
+  font-family: $font1
+h6, .h6
+  color: $negro
+  font-weight: 400
+  font-family: $font1
+p
+  line-height: 1.5
+  margin: 10px auto
+ul
+  list-style: circle
+input[disabled]
+  cursor: not-allowed
+.input-group.focus, .form-control:focus
+  outline: 0 !important
+.iconmoon
+  font-family: $fontIcon
+  font-style: normal
+  position: relative
+  transition: .3s
+  &::after
+    position: absolute
+    left: 0
+.row
+  margin-right: 0px
+  margin-left: 0px
+#wrapper
+  padding: 0px
+  background: $white
+  box-shadow: none
+.container
+  padding: 0px
+  width: 100%
+  background-color: transparent
+a.btn, .btn.btn-primary
+  min-width: 160px
+  border-radius: 2px
+  min-height: 45px
+  line-height: 45px
+  background: $tertiaryButton
+  color: $white
+  font-weight: 500
+  font-family: $font2
+  font-size: 15px
+  text-transform: uppercase
+  transition: .3s
+  text-align: center
+  padding: 0px
+  margin: 0px auto
+  box-shadow: none
+  &:hover
+    background: $secondary
+.btn-info
+  background: $primary
+  border: none
+  box-shadow: none
+  transition: .3s
+  &:hover
+    background: $secondary
+.btn-link
+  color: $primary
+  transition: .3s
+  &:hover
+    color: $secondary
+.btn
+  border-radius: 2px
+  &.btn-tertiary
+    background: $sixth
+    box-shadow: none
+    &:hover
+      color: $white
+      background: $secondary
+  &.btn-secondary
+    background: $fifth
+    box-shadow: none
+    &:hover
+      color: $white
+      background: $primary
+//jolisearch
+.ui-autocomplete.ui-menu.ui-jolisearch
+  li.product
+    .jolisearch-description
+      font-family: $font2
+      .jolisearch-name
+        color: $primary
+    .jolisearch-post-right
+      color: $tertiary
+      font-weight: 500
+  .ui-menu-item span.jolisearch-title
+    background: $negro
+//menu
+.ets_mm_megamenu
+  .container
+    background-color: transparent !important
+  #_desktop_language_selector
+    display: none
+//para responsivo
+.after-header-devices
+  display: none
+  width: 90%
+  margin: 0px auto
+  color: $white
+  background-color: $primary
+  font-size: 19px
+  font-family: $font2
+  font-weight: bold
+  text-align: left
+  p
+    width: 100%
+    margin: 0px auto
+    color: $white
+    background-color: $primary
+    font-size: 17px
+    font-family: $font2
+    font-weight: 500
+    text-transform: uppercase
+//header
+body main > #header
+  background: $primary
+  color: $white
+  .header-nav, .header-top
+    background-color: transparent
+    border: none
+    max-width: $max-width
+    margin: 0px auto
+  .header-nav
+    margin: 0px auto
+    width: 100%
+    display: block
+    padding-top: 16px
+    .language-selector
+      margin: 0px auto
+      text-align: right
+  .language-selector
+    margin: 0px auto
+    .expand-more
+      color: $white
+      font-size: 14px
+      font-weight: bold
+      padding: 0px
+      min-width: 98px
+      height: 32px
+      line-height: 32px
+      text-indent: 9px
+      position: relative
+      box-sizing: border-box
+      border: 1px solid $grey
+      display: block
+      text-align: left
+      img
+        margin-left: 5px
+        border-radius: 50%
+        width: 13px
+        height: 13px
+        object-fit: cover
+        position: relative
+        margin-bottom: 2px
+      &::after
+        content: '\e912'
+        color: $white
+        position: absolute
+        right: 0
+        font-size: 20px
+        font-weight: 400
+        height: 100%
+        top: 0
+        text-align: center
+        display: block
+        font-family: $fontIcon
+    .dropdown-menu
+      left: auto
+      right: 0
+      background: $primary
+      color: $white
+      a
+        color: $white
+        font-size: 14px
+      img
+        margin-right: 5px
+        border-radius: 50%
+        width: 13px
+        height: 13px
+        object-fit: cover
+  .header-top
+    #_desktop_logo
+    .position-static
+      display: flex
+      flex-direction: row
+      align-items: center
+      color: $white
+      margin: 23px auto 0px
+      padding: 0px
+      justify-content: flex-end
+      a
+        color: $white
+        &:hover
+          color: $tertiary
+      #search_widget
+        margin: 0px 60px 0px 0px
+        display: flex
+        flex-direction: row
+        align-items: center
+        overflow: hidden
+        .iconmoon
+          font-size: 31px
+          height: 39px
+          position: relative
+          display: block
+          &.search
+            width: 40px
+            &::after
+              content: '\e917'
+              right: 0
+          &.lupa
+            width: 36px
+            transition: .3s
+            margin-left: 5px
+            cursor: pointer
+            &::after
+              content: '\e911'
+              top: 1px
+            &:hover
+              color: $tertiary
+        form
+          opacity: 0
+          min-width: 0
+          width: auto
+          transition: opacity linear .3s, width linear .5s
+          button[type="submit"]
+            color: $white
+            right: 0
+            top: 0
+            bottom: auto
+            background: $tertiary
+            height: 39px
+            width: 45px
+            margin: 0px
+            padding: 0px
+            transition: .3s
+            &:hover
+              .search
+                color: $seventh
+          input[type="text"]
+            background: $white
+            color: $primary
+            border-radius: 2px
+            margin: 0px 42px 0px 0px
+            padding: 0px
+            height: 39px
+            line-height: 39px
+            &:focus
+              outline: 0px solid $tertiary !important
+              box-shadow: inset 0px 0px 3px #D77311
+          &.activo
+            opacity: 1
+            min-width: 250px
+            width: auto
+            z-index: 1000
+      #_desktop_user_info
+        color: $white
+        margin: 0px 40px 0px 0px
+        .user-info
+          display: flex
+          flex-direction: row
+          align-items: center
+          .iconmoon
+            font-size: 34px
+            width: 38px
+            height: 39px
+            display: block
+            &::after
+              content: '\e901'
+          .account-info
+            display: flex
+            flex-direction: column
+      #_desktop_cart
+        color: $white
+        a
+          display: flex
+          flex-direction: row
+          align-items: center
+        .iconmoon
+          font-size: 35px
+          width: 42px
+          height: 39px
+          display: block
+          &::after
+            content: '\e900'
+        .cart-products-count
+          margin-left: 3px
+      .header
+        display: flex
+        flex-direction: row
+        align-items: center
+  .ets_mm_megamenu
+    .ets_mm_megamenu_content
+      background: $primary
+      border: none
+      max-width: 100%
+      width: fit-content
+      margin: 0px auto
+      .mm_menus_ul
+        .mm_menus_li
+          border: none
+          .mm_menu_content_title
+            font-family: $font2
+            font-style: normal
+            font-size: 17px
+            font-weight: 500
+            text-transform: lowercase
+            &::first-letter
+              text-transform: capitalize
+      .ybc-menu-toggle.ybc-menu-btn
+          background: transparent
+          color: $white
+          .ybc-menu-button-toggle_icon
+            background: transparent
+          .iconmoon
+            background: $primary
+            display: block
+            &.burguer
+              font-size: 30px
+              width: 50px
+              height: 40px
+              color: $white
+              &::after
+                content: '\e91f'
+                top: 15px
+                left: 0
+    ul
+      list-style: none
+  .header-banner
+    display: block
+    margin: 0px auto
+    width: 100%
+    max-width: 100%
+    .textoheadermovil
+      width: 100%
+      display: block
+      margin: 0px auto
+      color: $white
+      text-align: center
+      background: $secondary
+      padding: 0px
+      transition: .3s
+      p
+        margin: 0px auto
+        padding: 0.5em
+        color: #fff
+        font-weight: 500
+        font-size: 18px
+      &.scroll_heading
+        position: fixed
+        top: 70px
+        z-index: 99
+  //> .textoheadermovil
+    width: 100%
+    display: block
+    margin: 0px auto
+    color: $white
+    text-align: center
+    background: $secondary
+    padding: 0px
+    p
+      margin: 0px auto
+      padding: 0.5em
+      color: #fff
+      font-weight: 500
+      font-size: 18px
+.page-home
+  #carousel
+    order: 0
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.3)
+    width: 100%
+    margin: 0px auto
+    display: block
+    overflow: hidden
+    .carousel-inner
+      height: 100%
+      margin: 0px auto
+      li
+        figure
+          .caption
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            max-width: 90%
+            display: flex
+            flex-direction: column
+            align-items: center
+            .claim
+              color: $white
+              text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3)
+    .direction
+      display: none
+  .h1seohome
+    width: 100%
+    display: block
+    margin: 34px auto
+    max-width: $max-width
+    padding: 30px 0px 20px
+    h1
+      text-align: center
+      width: 100%
+      display: block
+      margin: 0px auto 10px
+      color: $primary
+    p
+      width: 100%
+      display: block
+//escritorio
+._desktop_device
+  #header
+    .ets_mm_megamenu
+      .ets_mm_megamenu_content
+        .mm_menus_ul
+          .mm_menus_li
+            .mm_menu_content_title
+              padding-bottom: 30px
+              white-space: nowrap
+              .mm_arrow
+                display: none
+            &:hover
+              > a
+                &::before
+                  display: none
+            &:last-child
+              .mm_menu_content_title
+                padding-right: 0px
+      .mm_columns_ul
+        border: none
+        top: 2.5rem
+        padding-top: 30px
+        .ets_mm_block_content
+          .ets_mm_categories
+            li
+              a
+                &::before
+                  display: none
+              &.has-sub
+                ul
+                  background: none
+                  border: none
+                > .ets_mm_categories
+                  box-shadow: none
+                  left: 0
+                  margin-left: 0px
+                  top: 26px
+                  background: $primary
+@media (max-width: 1450px)
+  #header
+    .ets_mm_megamenu
+      .ets_mm_megamenu_content
+        .mm_menus_ul
+          .mm_menus_li
+            .mm_menu_content_title
+              padding: 20px 13px
+@media (max-width: 1200px)
+  #header
+    .ets_mm_megamenu
+      &.layout_layout1
+        background: transparent
+      &.disable_sticky_mobile.changestatus
+        position: absolute
+        top: 0
+        margin-top: 7px
+        .ets_mm_megamenu_content
+          background: transparent
+          .ybc-menu-toggle.ybc-menu-btn
+            background: transparent
+            color: $white
+            .ybc-menu-button-toggle_icon
+              background: transparent
+            .iconmoon
+              background: $primary
+              display: block
+              &.burguer
+                font-size: 30px
+                width: 50px
+                height: 40px
+                color: $white
+                &::after
+                  content: '\e91f'
+                  top: 15px
+                  left: 0
+          .mm_menus_ul
+            .close_menu
+              display: none !important
+              position: absolute
+              right: 0
+              .pull-left
+                display: none
+              .pull-right
+                color: $primary
+                span
+                  border-color: $negro
+            .mm_menus_li
+              a
+                background: $white
+              .mm_menu_content_title
+                font-size: 25px
+                color: $primary
+              .mm_columns_ul.active
+                list-style: none
+                border: none
+                text-indent: 10px
+              &.mm_has_sub
+                .arrow
+                  &.opened
+                    &::before
+                      transform: rotate(90deg)
+                      top: -10px
+                      //left: auto
+                      //right: 0
+                li.has-sub
+                  > .arrow.opened
+                    &::before
+                      top: -40px
+                .mm_columns_ul.active
+                  padding-top: 0px
+                  top: 0
+                  text-indent: 4rem
+            &.active
+              background: $white
+              left: 0px !important
+              max-width: 90%
+              box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2)
+              padding-top: 10px
+              padding-bottom: 10px
+              .arrow
+                font-family: $fontIcon
+                width: 50%
+                right: 0
+                transition: .3s
+                &::before
+                  content: '\e912'
+                  //top: 0
+                  text-align: right
+                  width: 80%
+                  height: 100%
+                  color: $negro
+                  border-top: none !important
+                  width: 40px
+                  height: 40px
+                  display: flex
+                  justify-content: center
+                  align-items: center
+                  line-height: 40px
+                  transition: .3s
+                &::after
+                  display: none
+
+      .ets_mm_block_content
+        ul
+          li
+            a
+              font-size: 20px
+              color: $negro
+              &::before
+                display: none
+      .container
+        background-color: transparent !important
+      .ets_mm_megamenu_content
+        background: $primary
+        border: none
+        .mm_menus_ul
+          .mm_menus_li
+            border: none
+            .mm_menu_content_title
+              font-family: $font2
+              font-style: normal
+              font-size: 18px
+              font-weight: 500
+              text-transform: lowercase
+              &::first-letter
+                text-transform: capitalize
+      ul
+        list-style: none
+    .header-nav
+      max-width: 100%
+      #_mobile_logo
+        text-align: left
+        max-width: calc(100% - 120px)
+        margin: 0px 20px 0px auto
+        position: relative
+        z-index: 9999
+        svg
+          max-height: 40px
+          max-width: 100%
+  #header .ets_mm_megamenu:not(.changestatus) .ets_mm_block_content ul li a
+    color: $white
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px)
+  #header
+    .header-banner
+      .textoheadermovil
+        &.scroll_heading
+          top: 65px
+@media (max-width: 900px)
+  //.header-banner
+    display: none
+    .textoheadermovil
+      display: none !important
+  #header
+    .header-banner
+      .textoheadermovil
+        opacity: 0
+        height: 0
+        top: 0
+        &.scroll_heading
+          top: 0
+          opacity: 1
+          height: auto
+@media(max-width: 1125px)
+  #header .ets_mm_megamenu .mm_columns_ul .ets_mm_block_content .ets_mm_categories li.has-sub > .ets_mm_categories
+    background: none !important
+    li
+      margin-bottom: 10px
+@media (min-width: 768px) and (max-width: 1200px)
+  #header
+    .header-nav, .header-top
+      max-width: $max-widthMF
+    .ets_mm_megamenu
+      &.layout_layout1
+      &.disable_sticky_mobile.changestatus
+        top: 31px
+        margin-top: 0px
+        z-index: 1
+        .ets_mm_megamenu_content
+          .mm_menus_ul
+            .mm_menus_li
+            &.active
+              text-indent: 3rem
+        .ybc-menu-toggle.ybc-menu-btn
+          padding: 15px 15px 15px 30px
+    .header-top
+      #_desktop_logo
+        margin-left: 35px
+        z-index: 9999
+        min-width: 282px
+      .position-static
+        max-width: calc(90% - 282px)
+        float: right
+        position: relative
+        z-index: 99
+@media (min-width: 900px) and(max-width: 1189px)
+  #header
+    .ets_mm_megamenu
+      &.layout_layout1
+      &.disable_sticky_mobile.changestatus
+        top: 71px
+@media (max-width: 1035px)
+  #header .header-top .position-static a.account
+    display: none
+@media (width: 768px)
+  #header
+    > .textoheadermovil
+      display: none
+    .ets_mm_megamenu.disable_sticky_mobile.changestatus
+      .ets_mm_megamenu_content .ybc-menu-toggle.ybc-menu-btn.closed
+        z-index: 1
+    .header-top #_desktop_logo
+      z-index: 999
+      margin-top: 35px
+      margin-left: 35px
+    .header-top
+      padding-bottom: 1rem
+      .position-static
+        z-index: 999
+        background: none !important
+        position: relative
+    .header-nav
+      .after-header-devices
+        display: block
+        width: 100%
+        //padding: 1rem
+        p
+          display: block
+        .textoheadermovil
+          max-width: 90%
+          width: 100%
+          margin: 0px auto
+          text-transform: uppercase
+@media (max-width: 768px)
+  #header
+    &.is-open
+      background-color: #141E29
+      .header-top
+        background: none
+    .ets_mm_megamenu.disable_sticky_mobile.changestatus
+      top: 39px
+    .header-nav
+      #_desktop_language_selector
+        display: none
+      .after-header-devices
+        display: flex
+        align-items: center
+        justify-content: space-between
+        #_desktop_language_selector
+          display: block
+          .language-selector
+            .expand-more
+              font-size: 0px
+              min-width: 65px
+              img
+                width: 20px
+                height: 20px
+            .dropdown-menu
+              text-indent: 10px
+              z-index: 99999
+              a
+                padding-top: 1em
+    .header-top
+      padding-bottom: 0px
+      background-color: none
+      .position-static
+        display: flex
+        flex-direction: row
+        align-items: center
+        color: $white
+        margin: 23px auto 0px
+        padding: 0px
+        justify-content: space-between
+        background: $fourth
+        height: 63px
+        > div
+          flex-basis: 33%
+          align-self: center
+          margin: 0px auto
+          text-align: center
+          width: 100%
+          height: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+        a
+          color: $white
+          &:hover
+            color: $tertiary
+        #search_widget
+          position: relative
+          form
+            position: absolute
+            top: 61px
+            left: 0px
+            min-width: 60vw
+            padding: 1rem
+            background: $primary
+            input[type="text"]
+              height: 50px
+              line-height: 50px
+            button[type="submit"]
+              height: 50px
+              margin-right: 1rem
+              top: 1rem
+  body > main
+    overflow: hidden
+@media (width: 768px)
+  #header
+    .ets_mm_megamenu.disable_sticky_mobile.changestatus
+      top: 66px
+@media (max-width: 767px)
+  #header
+    .header-top
+      .position-static
+        > div
+          margin: 0px auto !important
+        #_desktop_user_info
+          background: $secondary
+@media (max-width: 600px)
+  #header
+    .header-nav, .header-top
+      background-color: transparent
+@media (max-width: 450px)
+  #header .ets_mm_megamenu.disable_sticky_mobile.changestatus .ets_mm_megamenu_content .ybc-menu-toggle.ybc-menu-btn .iconmoon.burguer
+    font-size: 26px
+  #header .ets_mm_megamenu.disable_sticky_mobile.changestatus .ets_mm_megamenu_content .mm_menus_ul .mm_menus_li a
+    white-space: nowrap
+  #header .ets_mm_megamenu.disable_sticky_mobile.changestatus .ets_mm_megamenu_content .mm_menus_ul .mm_menus_li.mm_has_sub .mm_columns_ul.active
+    text-indent: 1rem
+  #header
+    .after-header-devices
+      p
+        font-size: 13px
+@media (max-width: 360px)
+  #header .header-nav #_mobile_logo svg
+    //max-width: 80%
+  #header .ets_mm_megamenu.disable_sticky_mobile.changestatus .ets_mm_megamenu_content .mm_menus_ul.active .arrow
+    width: 25%

@@ -1,0 +1,1252 @@
+$media-breakpoint-up-xss: 380px
+$media-breakpoint-up-xs: 450px
+$media-breakpoint-up-xms: 510px
+$media-breakpoint-up-ms: 600px
+$media-breakpoint-up-mds: 768px
+$media-breakpoint-up-md: 840px
+$media-breakpoint-up-m: 900px
+$media-breakpoint-up-lg: 992px
+$media-breakpoint-up-lmg: 1000px
+$media-breakpoint-up-l: 1050px
+$media-breakpoint-up-lm: 1160px
+$media-breakpoint-up-xl: 1240px
+$media-breakpoint-up-xx: 1400px
+
+
+=break-up($breakpoint)
+  @if $breakpoint == xss
+    @media (min-width: $media-breakpoint-up-xss)
+      @content
+
+  @if $breakpoint == xs
+    @media (min-width: $media-breakpoint-up-xs)
+      @content
+
+  @if $breakpoint == xms
+    @media (min-width: $media-breakpoint-up-xms)
+      @content
+
+  @if $breakpoint == ms
+    @media (min-width: $media-breakpoint-up-ms)
+      @content
+
+  @if $breakpoint == mds
+    @media (min-width: $media-breakpoint-up-mds)
+      @content
+
+  @if $breakpoint == md
+    @media (min-width: $media-breakpoint-up-md)
+      @content
+
+  @if $breakpoint == m
+    @media (min-width: $media-breakpoint-up-m)
+      @content
+
+  @if $breakpoint == lg
+    @media (min-width: $media-breakpoint-up-lg)
+      @content
+
+  @if $breakpoint == lmg
+    @media (min-width: $media-breakpoint-up-lmg)
+      @content
+
+  @if $breakpoint == l
+    @media (min-width: $media-breakpoint-up-l)
+      @content
+
+  @if $breakpoint == lm
+    @media (min-width: $media-breakpoint-up-lm)
+      @content
+
+  @if $breakpoint == xl
+    @media (min-width: $media-breakpoint-up-xl)
+      @content
+
+  @if $breakpoint == xx
+    @media (min-width: $media-breakpoint-up-xx)
+      @content
+
+
+
+=break-down($breakpoint)
+  @if $breakpoint == xss
+    @media (max-width: $media-breakpoint-up-xss)
+      @content
+
+  @if $breakpoint == xs
+    @media (max-width: $media-breakpoint-up-xs)
+      @content
+
+  @if $breakpoint == xms
+    @media (max-width: $media-breakpoint-up-xms)
+      @content
+
+  @if $breakpoint == ms
+    @media (max-width: $media-breakpoint-up-ms)
+      @content
+
+  @if $breakpoint == mds
+    @media (max-width: $media-breakpoint-up-mds)
+      @content
+
+  @if $breakpoint == md
+    @media (max-width: $media-breakpoint-up-md)
+      @content
+
+  @if $breakpoint == m
+    @media (max-width: $media-breakpoint-up-m)
+      @content
+
+  @if $breakpoint == lg
+    @media (max-width: $media-breakpoint-up-lg)
+      @content
+
+  @if $breakpoint == lmg
+    @media (max-width: $media-breakpoint-up-lmg)
+      @content
+
+  @if $breakpoint == l
+    @media (max-width: $media-breakpoint-up-l)
+      @content
+
+  @if $breakpoint == lm
+    @media (max-width: $media-breakpoint-up-lm)
+      @content
+
+  @if $breakpoint == xl
+    @media (max-width: $media-breakpoint-up-xl)
+      @content
+
+  @if $breakpoint == xx
+    @media (max-width: $media-breakpoint-up-xx)
+      @content
+
+
+//1400px
++break-down(xx)
+  body#category._mobile_device
+    .banner-header
+      img
+        display: none
+  #cookieNotice
+    #cookieNoticeContent
+      max-width: 40vw
+//1240px
++break-down(xl)
+  #feder
+    margin: 0 auto
+    padding: 0 20px
+  #cookieNotice
+    #cookieNoticeContent
+      max-width: 40vw
+  aside#notifications
+    max-width: $max-widthMF
+  .breadcrumb
+    max-width: $max-widthMF
+  #footer
+    .footer-container
+      max-width: $max-widthMF
+    .copyright
+      .firma
+        max-width: $max-widthMF
+  .products
+    article
+      .thumbnail-container
+        .product-description
+          .btn-add-to-car
+            .btn
+              min-width: 90%
+  .page-home
+    .h1seohome
+      max-width: $max-widthMF
+    .featured-products
+      .products-section-title
+        max-width: $max-widthMF
+      .products
+        max-width: $max-widthMF
+        article
+          .thumbnail-container
+            .product-description
+              .btn-add-to-car
+                .btn
+                  min-width: 90%
+      .products-devices
+        max-width: $max-widthMF
+    #homecategoriez
+      .title
+        max-width: $max-widthMF
+      .category-home-list
+        max-width: $max-widthMF
+    #custom-text
+      .limitar
+        max-width: $max-widthMF
+        .text
+          margin-right: 10px
+      .img
+        left: 0
+    .ybc_block_latest
+      max-width: $max-widthMF
+    .seotitle
+      max-width: $max-widthMF
+    .page-footer
+      max-width: $max-widthMF
+  #products
+    .products
+      article
+        max-width: 29%
+  #category
+    .banner-header
+      .category-description
+        max-width: $max-widthMF
+    #wrapper
+      .content-inner
+        max-width: $max-widthMF
+  #product
+    #content-wrapper
+      #main
+        .title-product, .product-all-info, .tabs,
+          max-width: $max-widthMF
+        .product-accessories
+          .h5.text-uppercase, .products
+            max-width: $max-widthMF
+  #blockcart-modal
+    .modal-dialog
+      max-width: $max-widthMF
+  #module-ambjolisearch-jolisearch, #search
+    #content-wrapper
+      #main
+        #js-product-list-header
+          max-width: $max-widthMF
+        #products
+          max-width: $max-widthMF
+  #cms
+    #content-wrapper
+      #main
+        .page-header
+          max-width: $max-widthMF
+        .page-content
+          max-width: $max-widthMF
+        .columns2
+  #stores
+    #content-wrapper
+      #main
+        .page-header
+          max-width: $max-widthMF
+        .page-content
+          max-width: $max-widthMF
+          .stores
+            article
+              min-height: 200px
+              min-width: 300px
+              .store-item-container
+                height: 100%
+                width: 100%
+                .store-picture
+                  img
+                    max-width: 500%
+  .page-contact
+    #content-wrapper
+      #main
+        .page-content
+          .content-full, .content-title, .contact-page-content
+            max-width: $max-widthMF
+            margin-left: auto
+            margin-right: auto
+          .contact-form
+            max-width: $max-widthMF
+            form
+              label.btn
+                padding: .5rem 1rem
+  #cart
+    #wrapper
+      #content-wrapper
+        #main
+          > .cart-grid
+            max-width: $max-widthMF
+        .featured-products
+          max-width: $max-widthMF
+  .bootstrap-touchspin
+    min-width: 80px
+  body.page-customer-account #content-wrapper #main .page-content, body.page-my-account #content-wrapper #main .page-content,
+  body.page-customer-account #content-wrapper #main .page-header, body.page-my-account #content-wrapper #main .page-header,
+  body.page-customer-account #content-wrapper #main .page-footer, body.page-my-account #content-wrapper #main .page-footer
+    max-width: $max-widthMF
+  #authentication
+    div#onepagecheckoutps
+      max-width: $max-widthMF
+  body.page-customer-account #content-wrapper #main .page-footer, body.page-my-account #content-wrapper #main .page-footer
+    display: flex
+    justify-content: space-around
+    align-items: center
+  #module-codfee-payment #main .page-content > form
+    max-width: $max-widthMF    
+@media (min-width: 768px) and (max-width: 1200px)
+  #checkout #header .header-top #_desktop_logo
+    margin-top: 30px
+  #cms #content-wrapper #main .page-content .contenido-mitad
+    .cms-collage
+      img
+        width: 50%
+        &:last-child
+          display: none
+@media (min-width: 768px) and (max-width: 1010px)
+  .page-home
+    #homecategoriez
+      .category-home-list
+        .bloque
+          .category-home-item
+            padding: 1rem 0px 1rem 1rem
+            .category-title
+              font-size: 26px
+            .category-description
+              font-size: 15px
+    #custom-text
+      margin: 20px auto 124px
+      padding-bottom: 0px
+      padding-top: 0px
+      .limitar
+        flex-direction: column
+        flex-wrap: wrap
+        .img
+          position: relative
+          left: 50%
+          transform: translateY(40%) translateX(-50%)
+          margin-top: -67px
+          bottom: 50%
+          top: 0
+          order: 2
+        .text
+          max-width: 100%
+          margin-right: auto
+          text-align: center
+          padding-top: 20px
+          order: 1
+  #products
+    .products
+      article
+        .thumbnail-container
+          .product-description
+            .btn-add-to-car
+              .btn
+                &::before
+                  display: none
+@media (min-width: 769px) and (max-width: 900px)
+  #products
+    .products
+      article
+        .thumbnail-container
+          .product-description
+            .product-title
+              min-height: 58px
+            .product-price-and-shipping
+              min-height: 50px
+              display: flex
+              flex-direction: column
+  #category
+    #wrapper
+      .content-inner
+        #left-column
+          #search_filters_wrapper
+            #search_filters
+              .text-uppercase
+                font-size: 1.25rem
+              .facet
+                a
+                  font-size: 1rem
+                  text-overflow: unset
+                .facet-title
+                  font-size: 1rem
+          .block-categories
+            .text-uppercase
+                font-size: 1.25rem
+            .category-top-menu
+              .category-sub-menu
+                li
+                  a
+                    font-size: 1.2rem
+@media (min-width: 1000px)
+  #header .header-top .position-static #search_widget form
+    opacity: 1
+    min-width: 250px
+    width: auto
+    z-index: 1000
+@media (max-width: 1115px)
+  #header
+    .ets_mm_megamenu
+      .mm_columns_ul
+        .ets_mm_block_content
+          .ets_mm_categories
+            li.has-sub
+              ul
+                li
+                  padding-top: 10px
+  #stores
+    #content-wrapper
+      #main
+        .page-header
+          max-width: $max-widthMF
+        .page-content
+          max-width: $max-widthMF
+          .stores
+            justify-content: center
+            align-items: center
+@media (max-width: 1025px)
+  #module-ambjolisearch-jolisearch, #search
+    #content-wrapper
+      #main
+        #products
+          .products
+            flex-basis: 20%
+  .page-home .featured-products .products.without-slick article
+    max-width: 20%
+    .thumbnail-container .product-description .btn-add-to-car .btn::before
+      display: none
+
+//1050
++break-down(l)
+  .page-home #carousel .carousel-inner li figure .caption
+    top: 35%
+    .caption-description
+      display: block
+
+//1000
++break-down(lmg)
+  #cookieNotice
+    #cookieNoticeContent
+      max-width: 50vw
+  .slick-initialized
+    .slick-slide
+      padding: 0px 1rem
+  .page-home
+    #homecategoriez
+      .category-home-list
+        .bloque
+          overflow: hidden
+          img
+            object-fit: cover
+  .page-home
+    #carousel
+      .carousel-inner > .carousel-item.activ
+        box-shadow: 0px 4px 11px rgba(0,0,0,0.3)
+//992
++break-down(lg)
+  .page-home #carousel .carousel-inner li figure .caption
+    top: 20%
+  #footer
+    .hook_footer_before
+      .block_newsletter
+        max-width: 90%
+    .footer-container
+      .hook_footer
+        .content_hook_footer
+          flex-direction: center
+          align-content: center
+          flex-wrap: wrap
+          .block-contact
+            flex-basis: 100%
+            text-align: center
+            margin-bottom: 30px
+            svg
+              margin: 0px auto 30px
+            a
+              margin: 0px auto 30px
+            .footer-pay ul
+              justify-content: center
+          .ps-linksblock
+            flex-basis: 67%
+    .copyright
+      .firma
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        .ps-linksblock
+          flex-basis: 60%
+        .firma-db
+          justify-content: center
+          align-items: center
+          flex-basis: 100%
+  #cart
+    #wrapper
+      #content-wrapper
+        #main
+          > .cart-grid
+            justify-content: center
+            flex-direction: column
+            .cart-grid-body
+              background: $white
+            .cart-grid-right
+              max-width: 300px
+              margin-top: 20px
+  #cms #content-wrapper #main .page-content .store-view-single .contenido-mitad .info
+    flex-direction: column
+
+//900
++break-down(m)
+  .carousel .carousel-item .caption .display-1
+    font-size: 1.7rem
+
+//840px
++break-down(md)
+  #cookieNotice
+    #cookieNoticeContent
+      max-width: 60vw
+  .page-home
+    #homecategoriez
+      .category-home-list
+        //flex-direction: column
+        //justify-content: center
+        .bloque
+          //height: 245px
+          img
+            display: none
+            //object-fit: contain
+    #custom-text
+      padding: 0px
+      margin: 10px auto
+      .limitar
+        flex-direction: column
+        justify-content: center
+        padding: 25px 0px 10px
+        .img
+          position: relative
+          margin: 0px auto
+          order: 2
+          top: auto
+          transform: none
+          max-width: 80%
+          left: auto
+          bottom: auto
+        .text
+          max-width: 100%
+          width: 100%
+          text-align: center
+          margin-bottom: 20px
+  #category
+    .filter-button
+      #search_filter_toggler
+        background: none
+        font-family: $fontIcon
+        &::after
+          font-family: $fontIcon
+          content: '\e902'
+          color: $negro
+        .icomoon
+          &.filter
+            font-family: $fontIcon
+            content: '\e902'
+            font-size: 30px
+            color: $negro
+          &::before
+            font-family: $fontIcon
+            content: '\e902'
+            color: $negro
+  #blockcart-modal
+    .modal-dialog
+      .modal-body
+        .divide-right
+          border: none
+          .col-md-6
+            width: 100%
+        .cart-content
+          .cart-content-btn
+            align-items: center
+  #checkout
+    div#onepagecheckoutps
+      #onepagecheckoutps_step_one
+        div.form-group
+          width: 100%
+  #address .address-form form .form-footer
+    text-align: center
+  body.page-customer-account #content-wrapper #main .page-header, body.page-my-account #content-wrapper #main .page-header
+    text-align: center
+  .page-contact #content-wrapper #main .page-content .contact-page-content
+    flex-direction: column
+    .col
+      flex-basis: 100%
+      &:last-child
+        display: none
+  #cms #content-wrapper #main
+    .page-content
+      .contenido-mitad
+        flex-direction: column
+        .col-mitad
+      &.page-cms-8, &.page-cms-9
+        .contenido-mitad
+          .col-mitad
+            &:last-child
+              display: none
+      .store-view-single
+        .contenido-mitad
+          img
+            margin-top: 20px
+          .info
+            flex-direction: row
+
+@media (max-width: 768px)
+  #footer
+    .footer-container
+      .hook_footer
+        .content_hook_footer
+          .hidden-sm-down
+            display: none !important
+          .hidden-md-up
+            display: block !important
+            &.collapsed
+              .navbar-toggler
+                .material-icons
+                  &.add
+                    display: block
+                  &.remove
+                    display: none
+          .collapse
+            display: none
+            &.in
+              display: block
+          .block-contact
+            .footer-pay
+              display: none
+      .after-footer-devices
+        display: block
+        text-align: left
+        width: 100%
+        max-width: $max-widthMF
+        margin: 20px auto
+        .footer-pay
+          .footer-pay-title
+            font-size: 25px
+            font-weight: 500
+            margin-bottom: 20px
+            display: block
+            width: 100%
+//768px
++break-down(mds)
+  #feder
+    padding: 0 33px
+    padding-top: 20px
+    .images
+      img
+        margin: 5px auto
+  .breadcrumb.hidden-sm-down
+    display: block !important
+  #checkout .breadcrumb.hidden-sm-down
+    display: none !important
+  #footer
+    .hook_footer_before
+      .block_newsletter
+        border: none
+    .footer-container
+      max-width: 100%
+      .hook_footer
+        margin: 0px auto
+        .content_hook_footer
+          .block-contact
+            background: $fifth
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: stretch
+            align-items: center
+            margin-bottom: 0px
+            align-content: center
+            svg
+              display: none
+            a
+              font-size: 0px
+              display: inline-flex
+              margin: 0px auto
+              padding: 0px
+              height: 63px
+              line-height: 63px
+              flex-basis: 33%
+              width: 100%
+              &::before
+                display: none !important
+            .iconmoon
+              font-size: 30px
+              display: block
+              color: $white
+              position: relative
+              width: 100%
+              height: 100%
+              &::before
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+              &.phone
+                background: $orange
+                border-left: 1px solid $fourth
+                border-right: 1px solid $fourth
+                &::before
+                  content: '\e906'
+              &.stores
+                &::before
+                  content: '\e91e'
+              &.email
+                &::before
+                  font-size: 27px
+          #block_myaccount_infos
+            flex-basis: 100%
+          .ps-linksblock
+            flex-basis: 100%
+            .wrapper
+              width: 100%
+              &::before
+                display: none
+          .h3
+            font-weight: 500
+            font-size: 25px
+          .links
+            .title
+              padding: 1rem 2rem
+              border: none
+              position: relative
+              &::after
+                position: absolute
+                content: ''
+                bottom: 0
+                background: rgba(0, 0, 0, 0.2)
+                height: 1px
+                width: calc(100% - 10%)
+          ul
+            background: none
+            &.collapsing
+            &.collapse
+            padding: 1rem 2.5rem
+            font-size: 18px
+            font-weight: 500
+            li
+              font-size: 18px
+              font-weight: 500
+              margin: 0px
+              padding: 1rem 0px
+              border: none
+              a
+                font-size: 18px
+                font-weight: 500
+    .copyright
+      .firma
+        flex-direction: column
+        > div
+          margin: 10px auto
+        .ps-linksblock
+          flex-basis: 100%
+          ul
+            li
+              padding: 1em
+        .firma-db
+          justify-content: space-around
+          width: 100%
+  .page-home
+    #carousel
+      //display: none
+      .carousel-item img
+        min-height: 310px
+        object-fit: cover
+  #category
+    .banner-header
+      .category-description
+        h1
+          text-align: left
+    .title-category
+      display: flex
+      justify-content: space-between
+      .hidden-md-up
+        display: block !important
+      .filter-button
+        #search_filter_toggler
+          border: none
+          font-size: 30px
+    .breadcrumb
+      display: block !important
+    #wrapper
+      .content-inner
+        display: flex
+        flex-direction: column
+        #left-column
+          .hidden-md-up
+            display: block !important
+          .hidden-sm-down
+            display: none !important
+          #search_filters_wrapper
+            background: $white
+            display: flex
+            flex-direction: column
+            width: 100%
+            box-sizing: border-box
+            #search_filter_controls
+              order: 2
+              text-align: center
+              display: flex !important
+              justify-content: center
+              .btn.btn-tertiary
+                font-size: 1rem
+                padding: .5rem 1rem
+              .btn.btn-secondary
+                background: $primary
+                color: $white
+                margin-bottom: 40px
+                &:hover
+                  background: $tertiary
+            #search_filters
+              width: 100%
+              background: $white
+              padding-top: 0px
+              border: none
+              .text-uppercase
+                display: none
+              .facet
+                border: none
+                ul
+                  li
+                    border: none
+                .facet-label
+                  .custom-checkbox, .custom-radio
+                    top: -9px
+                .title
+                  display: flex !important
+                  .navbar-toggler
+                    .material-icons
+                      &.add
+                        display: none
+                      &.remove
+                        display: block
+                  &.collapsed
+                    .navbar-toggler
+                      .material-icons
+                        &.add
+                          display: block
+                        &.remove
+                          display: none
+                .collapse
+                  display: none
+                  &.in
+                    display: block
+          .block-categories
+            background: $white
+            display: block !important
+            .text-uppercase
+              display: none
+            .category-top-menu
+              .category-sub-menu
+                li
+                  a
+                    font-weight: 500
+                    width: auto
+                    position: relative
+                    &::after
+                      content: ''
+                      position: absolute
+                      width: 100%
+                      left: 0
+                      bottom: 0
+                      height: 2px
+                      background: $primary
+  #products
+    .products
+      article
+        max-width: 100%
+        width: 100%
+        flex-basis: 30%
+  #product
+    #content-wrapper
+      #main
+        .product-all-info
+          flex-direction: column
+          .products-section-description
+            padding: 1em
+  .page-contact
+    #content-wrapper
+      #main
+        .page-content
+          .contact-form
+            .form-footer
+              text-align: center !important
+            form
+              justify-content: center
+              margin-bottom: 30px
+  #cart
+    #wrapper
+      #content-wrapper
+        #main
+          > .cart-grid
+            .cart-grid-body
+              .cart-item
+                border-bottom: 1px solid #eee
+                .product-line-actions
+                  .price
+                    min-width: 100px
+  div#onepagecheckoutps #onepagecheckoutps_step_one div.form-group
+      width: 100%
+  #address #content-wrapper #main .page-content .address-form .form-fields
+    width: 100%
+  #checkout #header .ets_mm_megamenu.disable_sticky_mobile.changestatus
+    display: none
+  #order-detail #content-wrapper #main .page-content #order-infos .box:first-child .row
+    display: flex
+    flex-direction: column
+    .button-primary
+      margin-top: 20px
+@media (max-width: 767px)
+  body#checkout
+    #header
+      padding-top: 20px
+      .header-nav
+        display: block
+        > .container
+          > .row
+            display: none
+          .mobile
+            #_mobile_logo
+              margin: 0px auto
+              text-align: center
+  #authentication > main > #wrapper #main .page-content #login-form
+    .form-group
+      display: flex
+      margin-bottom: 10px
+@media (max-width: 765px)
+  #header
+      .ets_mm_megamenu.disable_sticky_mobile.changestatus
+        .ets_mm_megamenu_content
+          .mm_menus_ul
+            .mm_menus_li.mm_has_sub
+              .arrow.opened
+                &::before
+                  top: 0px
+@media (min-width: 760px) and (max-width: 800px)
+    .products
+      article
+        .thumbnail-container
+          .product-description
+            .btn-add-to-car
+              .btn::before
+                left: 0.5rem
+@media (min-width: 600px) and (max-width: 760px)
+  .products
+    article
+      .thumbnail-container
+        .product-description
+          .btn-add-to-car
+            text-indent: 0px
+            .btn::before
+              display: none
+@media (max-width: 690px)
+  #authentication > main > #wrapper #main
+    max-width: 90%
+    .page-content #login-form .form-group
+      flex-direction: column
+      align-items: center
+      label
+        white-space: nowrap
+  #cookieNotice
+    #cookieNoticeContent
+      max-width: 70vw
+  .page-home
+    .seotitle
+      .title
+        span
+          width: 100%
+          display: block
+          margin-right: auto
+          padding-right: 0px
+          margin-bottom: 10px
+          &::after
+            display: none
+  #cms
+    #content-wrapper
+      #main
+        .columns2
+          flex-wrap: wrap
+          .col
+            flex-basis: 100%
+            h2, h3
+              margin: 20px auto 10px
+  .page-home .featured-products .products.without-slick article
+    max-width: 45%
+    .thumbnail-container .product-description .btn-add-to-car .btn::before
+      display: block
+
+//600px
++break-down(ms)
+  #cookieNotice
+    #cookieNoticeContent
+      > table
+        display: flex
+        flex-direction: column
+        thead
+          th.label-notify
+            width: calc(100% - 10%)
+        tbody
+          padding: 2rem
+          p
+            font-size: 25px
+          .closeButtonNormal
+            min-width: 60vw
+  #footer
+    .hook_footer_before
+      .block_newsletter
+        margin: 30px auto 10px
+        .subclaim
+          display: none
+        .btn.btn-primary
+          min-width: 87px
+  .page-home
+    .featured-products
+      .products-devices
+        justify-content: space-between
+        article
+          flex-basis: 45%
+          max-width: 100%
+          overflow: hidden
+          padding-top: 20px
+          .thumbnail-container .product-description .btn-add-to-car .btn
+            text-indent: 0px
+            &::before
+              display: none
+    #homecategoriez
+      .category-home-list
+        flex-direction: column
+        justify-content: center
+        .bloque
+          //height: 245px
+          margin: 0px auto 0.5rem
+          display: flex
+          align-items: center
+          .category-home-item
+            max-width: 50%
+            padding: 1rem 0px 1rem 32px
+          img
+            display: block
+            margin-left: 10px
+            object-fit: contain
+  #category
+    .banner-header
+      img
+        display: none
+  #products
+    .products
+      article
+        flex-basis: 45%
+  .page-contact
+    #content-wrapper
+      #main
+        .page-content
+          .contact-form
+            .btn.btn-primary
+              width: 100%
+  #blockcart-modal
+    .modal-dialog
+      .modal-body
+        > .row
+          justify-content: center
+          > .col-md-7
+            width: 100%
+        .divide-right
+          display: none
+      .modal-header
+        text-align: center
+        .material-icons
+          display: none
+  #cart
+    #wrapper
+      #content-wrapper
+        #main
+          > .cart-grid
+            .cart-grid-right
+              .cart-summary
+                .btn.btn-primary
+                  width: 100%
+  #products
+    .products
+      article
+        .thumbnail-container
+          .product-description
+            .btn-add-to-car
+              .btn
+                &::before
+                  display: none
+  body.page-customer-account #content-wrapper #main .page-header, body.page-my-account #content-wrapper #main .page-header
+    text-align: center
+  body.page-customer-account #content-wrapper #main .page-footer, body.page-my-account #content-wrapper #main .page-footer
+    flex-direction: column
+    justify-content: center
+    a
+      margin: 20px auto
+  #module-psgdpr-gdpr
+    .btn.btn-primary.psgdprgetdatabtn17
+      margin: 20px auto
+      width: 100%
+      text-align: center
+  body._mobile_device .page-home .featured-products .products-devices article, body._mobile_device .page-home .featured-products .products._desktop article
+    flex-basis: 45%
+    max-width: 100%
+    overflow: hidden
+    padding-top: 20px
+  .products article .thumbnail-container .product-description .btn-add-to-car .btn::before
+    display: none !important
+  .breadcrumb ol
+    flex-wrap: wrap
+//510
++break-down(xms)
+  .g-recaptcha
+    max-width: 100%
+    display: inline-block
+    > div
+      max-width: 100%
+      display: inline-block
+    iframe
+      max-width: 100%
+  #cookieNotice
+    #cookieNoticeContent
+      max-width: 80vw
+  #footer
+    .copyright
+      .firma
+        .ps-linksblock
+          ul
+            flex-direction: column
+            a
+              font-size: 15px
+        .firma-db
+          flex-direction: column
+    .footer-container .hook_footer .content_hook_footer .links .title::after
+      width: calc(100% - 20%)
+  .slick-list
+    article
+      .thumbnail-container
+        .product-description
+          .btn-add-to-car
+            text-indent: 0px
+            .btn::before
+              display: none
+  .page-home
+    display: flex
+    flex-direction: column
+    > div
+      order: 2
+    .featured-products
+      order: 0
+    .h1seohome
+      order: 1
+    .seotitle
+      order: 2
+    #homecategoriez
+      .category-home-list
+        .bloque
+          .category-home-item
+            .category-description
+              min-height: 130px
+    #custom-text
+      overflow: hidden
+      .limitar
+        width: 100%
+        .img
+          max-width: 100%
+          width: 100%
+        .text
+          max-width: 90%
+  #products
+    .products
+      article
+        .thumbnail-container
+          .product-description
+            .btn-add-to-car
+              .btn
+                text-indent: 0px
+                &::before
+                  display: none
+  #product
+    #content-wrapper
+      #main
+        .tabs
+          h3
+            font-size: 1.1rem
+    .product-accessories
+      .slick-slider
+        .slick-arrow
+          z-index: 999
+          &.slick-next
+            right: -11px
+          &.slick-prev
+            left: -11px
+  #authentication > main > #wrapper #main .page-content #login-form .form-group .input-group .input-group-btn > .btn[data-action="show-password"]::after
+    left: 0
+  #cms #content-wrapper #main .page-content .store-view-single
+    .contenido-mitad .info
+      flex-direction: column
+    .contenido-final
+      flex-direction: column
+      a
+        margin: 10px auto
+        &:first-child
+          &::after
+            display: none
+  #addresses .card .card-body .address_card .container_card .footer_card
+    display: flex
+    flex-direction: column
+    button
+      margin-bottom: 20px
+  #cart
+    #wrapper
+      #content-wrapper
+        .featured-products
+          .products
+            article
+              max-width: 100%
+
+@media (max-width: 450px)
+  #products
+    .products
+      article
+        overflow: hidden
+        padding-top: 20px
+        .thumbnail-container
+          .product-description
+            .product-price-and-shipping
+              display: flex
+              flex-direction: column
+              min-height: 68px
+            .product-title
+              min-height: 60px
+  #module-ambjolisearch-jolisearch, #search
+    #content-wrapper
+      #main
+        #products
+          .products
+            article
+              flex-basis: 45%
+  #blockcart-modal
+    .modal-dialog
+      .modal-body
+        .cart-content
+          .cart-content-btn
+            width: 100%
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            .btn
+              width: 100%
+              margin: 20px auto
+            .btn-primary
+              order: 1
+              margin-bottom: 20px
+            .btn-secondary
+              order: 2
+//410
++break-down(xs)
+  .products
+    article
+      .thumbnail-container
+        .product-description
+          .product-title
+            min-height: 65px
+          .product-price-and-shipping
+            display: flex
+            flex-direction: column
+            min-height: 50px
+  .slick-initialized
+    .slick-slide
+      padding: 0px 0.5rem
+  .page-home #homecategoriez .category-home-list .bloque .category-home-item .category-more
+    white-space: nowrap
+
+//380
++break-down(xss)

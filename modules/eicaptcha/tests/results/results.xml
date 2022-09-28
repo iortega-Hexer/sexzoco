@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="eicaptcha_unit" tests="5" assertions="7" errors="1" failures="1" skipped="0" time="6.754321">
+    <testsuite name="ContactFormTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/ContactFormTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="6.686763">
+      <testsuite name="ContactFormTest::testCaptchaOnContactForm" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="6.686763">
+        <testcase name="testCaptchaOnContactForm with data set #0" class="ContactFormTest" classname="ContactFormTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/ContactFormTest.php" line="47" assertions="0" time="6.686763">
+          <error type="PHPUnit\Framework\RiskyTestError">Risky Test
+</error>
+          <system-out>object(GuzzleHttp\Psr7\Response)#256 (6) {
+  ["reasonPhrase":"GuzzleHttp\Psr7\Response":private]=&gt;
+  string(2) "OK"
+  ["statusCode":"GuzzleHttp\Psr7\Response":private]=&gt;
+  int(200)
+  ["headers":"GuzzleHttp\Psr7\Response":private]=&gt;
+  array(8) {
+    ["Date"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(29) "Thu, 08 Feb 2018 12:18:11 GMT"
+    }
+    ["Server"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(22) "Apache/2.4.18 (Ubuntu)"
+    }
+    ["P3P"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(50) "CP="IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA""
+    }
+    ["Powered-By"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(10) "PrestaShop"
+    }
+    ["Set-Cookie"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(341) "PrestaShop-d0f0c010c07103222cb12ed395761f5a=jmpcTa%2B5DoqCw%2BdNt0PBgWrAR1PXVhqsI4Twad5u2mVwkKh7RGVMSPXtmI59TQBRhoXfzrX2ha6ViuqoU%2Bp4tZqWrHd3tmoyjHkWVP6FLoIgWqGVnZmFpgr4xJD4ieV9Pzp5Yfna9ImDjacxOTPCVg%3D%3D000109; expires=Wed, 28-Feb-2018 12:18:12 GMT; Max-Age=1727995; path=/prestashop/prestashop_1-6-1-15/; domain=web.h-hennes.fr; HttpOnly"
+    }
+    ["Vary"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(15) "Accept-Encoding"
+    }
+    ["Transfer-Encoding"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(7) "chunked"
+    }
+    ["Content-Type"]=&gt;
+    array(1) {
+      [0]=&gt;
+      string(24) "text/html; charset=utf-8"
+    }
+  }
+  ["headerNames":"GuzzleHttp\Psr7\Response":private]=&gt;
+  array(8) {
+    ["date"]=&gt;
+    string(4) "Date"
+    ["server"]=&gt;
+    string(6) "Server"
+    ["p3p"]=&gt;
+    string(3) "P3P"
+    ["powered-by"]=&gt;
+    string(10) "Powered-By"
+    ["set-cookie"]=&gt;
+    string(10) "Set-Cookie"
+    ["vary"]=&gt;
+    string(4) "Vary"
+    ["transfer-encoding"]=&gt;
+    string(17) "Transfer-Encoding"
+    ["content-type"]=&gt;
+    string(12) "Content-Type"
+  }
+  ["protocol":"GuzzleHttp\Psr7\Response":private]=&gt;
+  string(3) "1.1"
+  ["stream":"GuzzleHttp\Psr7\Response":private]=&gt;
+  object(GuzzleHttp\Psr7\Stream)#258 (7) {
+    ["stream":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    resource(132) of type (stream)
+    ["size":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    NULL
+    ["seekable":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    bool(true)
+    ["readable":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    bool(true)
+    ["writable":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    bool(true)
+    ["uri":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    string(10) "php://temp"
+    ["customMetadata":"GuzzleHttp\Psr7\Stream":private]=&gt;
+    array(0) {
+    }
+  }
+}
+</system-out>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="EiCaptchaTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/EiCaptchaTest.php" tests="4" assertions="7" errors="0" failures="1" skipped="0" time="0.067558">
+      <testcase name="testModuleIsInstalled" class="EiCaptchaTest" classname="EiCaptchaTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/EiCaptchaTest.php" line="52" assertions="1" time="0.025438"/>
+      <testcase name="testModuleIsHooked" class="EiCaptchaTest" classname="EiCaptchaTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/EiCaptchaTest.php" line="61" assertions="3" time="0.036997"/>
+      <testcase name="testDefaultConfiguration" class="EiCaptchaTest" classname="EiCaptchaTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/EiCaptchaTest.php" line="75" assertions="1" time="0.002702">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">EiCaptchaTest::testDefaultConfiguration
+Failed asserting that '6Le-FwATAAAAAJIQQhDPahuxSFiV8bwRZ6ejzEY9' is false.
+
+/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/EiCaptchaTest.php:77
+</failure>
+      </testcase>
+      <testcase name="testSetCaptchaConfiguration" class="EiCaptchaTest" classname="EiCaptchaTest" file="/var/www/public/public/prestashop/global_modules/eicaptcha/tests/Unit/EiCaptchaTest.php" line="89" assertions="2" time="0.002421"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

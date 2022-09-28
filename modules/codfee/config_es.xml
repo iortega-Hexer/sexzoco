@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>codfee</name>
+    <displayName><![CDATA[Pago contra reembolso con comisi&oacute;n]]></displayName>
+    <version><![CDATA[3.5.0]]></version>
+    <description><![CDATA[Acepte pagos contra reembolso aplicando una comisi&oacute;n y pagos a la recogida. Configurable por grupo de clientes, transportista, pa&iacute;s, zona, categor&iacute;a de productos, fabricante y proveedor.]]></description>
+    <author><![CDATA[idnovate]]></author>
+    <tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[¿Estás segur@ que quieres borrar el módulo y todas su información relacionada?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

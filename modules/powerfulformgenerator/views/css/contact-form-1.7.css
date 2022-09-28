@@ -1,0 +1,57 @@
+.pfg-forms .form-group {
+  display: block;
+}
+
+.pfg-forms .form-group>label {
+  text-align: right;
+}
+
+.pfg-forms .form-group input, .pfg-forms .form-group textarea, .pfg-forms .form-group select {
+  background: #ebebeb;
+  color: #acaaa6;
+  border: none;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: 0;
+  width: 100%
+}
+
+.pfg-forms .form-group select {
+  height: 2.625rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: #ebebeb url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAPklEQVR4Ae3TwREAEBQD0V/6do4SXPZg7EsBhsQ8IEmSMOsiuEfg3gL3oXC7wK0bd1G4o8X9F4yIkyQfSrIByQBjp7QuND8AAAAASUVORK5CYII=") no-repeat scroll right .5rem center/1.25rem 1.25rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.pfg-forms .form-group select:not([size]):not([multiple]) {
+    height: 2.5rem;
+}
+
+.pfg-forms .form-group input:focus, .pfg-forms .form-group textarea:focus, .pfg-forms .form-group select:focus {
+    outline: .1875rem solid #2fb5d2;
+    background-color: #fff;
+    border-color: #66afe9;
+    color: #acaaa6;
+}
+
+.pfg-forms .form-group label.input {
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.pfg-forms .form-group label.input>input {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.pfg-forms .submit {
+  text-align: center
+}

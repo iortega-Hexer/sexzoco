@@ -1,0 +1,324 @@
+/** Material icons */
+
+.material-icons-outlined {
+  vertical-align: middle;
+}
+
+.material-icons-outlined.md-13 {
+  font-size: 13px;
+}
+.material-icons-outlined.md-16 {
+  font-size: 16px;
+}
+.material-icons-outlined.md-18 {
+  font-size: 18px;
+}
+.material-icons-outlined.md-22 {
+  font-size: 22px;
+}
+.material-icons-outlined.md-24 {
+  font-size: 24px;
+}
+.material-icons-outlined.md-36 {
+  font-size: 36px;
+}
+.material-icons-outlined.md-48 {
+  font-size: 48px;
+}
+
+.material-icons-outlined.md-flip-x {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.material-icons-outlined.md-flip-y {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+/** Content */
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #eff1f2;
+}
+
+.col-nav {
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .col-nav {
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    max-width: 200px;
+    min-height: calc(100vh - 58px);
+  }
+
+  .form-control.custom-width {
+    max-width: 120px;
+  }
+  .form-control.custom-width-lg {
+    max-width: 160px;
+  }
+  .form-control.custom-width-api {
+    max-width: 375px;
+  }
+  .custom-file.custom-width {
+    max-width: 50%;
+  }
+}
+
+/** Bootstrap mods */
+
+.card-header {
+  background-color: transparent;
+  padding: 1rem 1.25rem;
+}
+
+.list-group-item.active i {
+  color: #fff !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.gutters-sm {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.gutters-sm > [class='col'],
+.gutters-sm > [class*='col-'] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.custom-file-input:disabled ~ .custom-file-label {
+  opacity: 0.65;
+}
+
+.badge.badge-lg {
+  font-size: 0.875rem;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.dropdown-menu.dropdown-lg {
+  min-width: 15rem;
+}
+
+.dropdown-toggle.dropdown-no-caret::after {
+  display: none;
+}
+
+/** Header */
+
+#header {
+  min-height: 58px;
+  z-index: 1;
+}
+
+#header .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#header .navbar-nav .nav-link {
+  font-size: 0.937rem;
+}
+
+#header .navbar-nav .nav-link i {
+  font-size: 22px;
+}
+
+#header .navbar-nav .dropdown-toggle::after {
+  margin-bottom: -2px;
+}
+
+#header .navbar-brand {
+  font-size: 1rem;
+}
+
+#header .app-name {
+  font-weight: bold;
+}
+
+#header .app-version,
+#header .app-demo {
+  font-size: 0.875rem;
+  cursor: default;
+}
+
+/** Custom control card */
+
+.custom-control-card label {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  position: relative;
+  display: block;
+  min-height: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  border-radius: 0.25rem;
+}
+
+.custom-control-card label:hover {
+  background-color: #f8f9fa;
+}
+
+.custom-control-card .custom-control-label::after,
+.custom-control-card .custom-control-label::before {
+  top: 50%;
+  margin-top: -0.5rem;
+  left: 0.75rem;
+}
+
+.custom-control-card .custom-control-input:checked ~ .custom-control-label {
+  border-color: #18adca;
+}
+
+/** Bootstrap Switch */
+
+.bootstrap-switch input[type='radio'],
+.bootstrap-switch input[type='checkbox'] {
+  visibility: visible;
+}
+
+.bootstrap-switch {
+  border-color: #e2e6ea;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.bootstrap-switch.bootstrap-switch-focused {
+  border-color: #73daee;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(24, 173, 202, 0.25);
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+  background: #18adca;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default {
+  background: #e2e6ea;
+}
+
+/** Select 2 */
+
+.select2-container .select2-selection--single,
+.select2-dropdown {
+  border-color: #ced4da;
+}
+
+.select2-container .select2-selection--single {
+  height: 38px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select2-container .select2-selection--single:focus {
+  border-color: #73daee;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(24, 173, 202, 0.25);
+}
+
+.select2-container--default .select2-results__option[aria-selected='true'] {
+  background-color: #e2e6ea;
+}
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: #18adca;
+  color: white;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 36px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 38px;
+}
+
+/** Select 2 multiple */
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  background-color: #f8f9fa;
+  border-color: #e2e6ea;
+}
+
+.select2-container--default .select2-selection--multiple {
+  border-color: #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select2-container--default.select2-container--focus
+  .select2-selection--multiple {
+  border-color: #73daee;
+  border-radius: 4px !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(24, 173, 202, 0.25);
+}
+
+/** Select 2 bootstrap mods */
+
+.input-group > .select2-container {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1% !important;
+  margin-bottom: 0;
+}
+
+.input-group
+  > .input-group-append
+  > .select2-container
+  > .selection
+  > .select2-selection,
+.input-group
+  > .select2-control:not(:first-child)
+  > .select2-container
+  > .selection
+  > .select2-selection {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.input-group
+  > .input-group-prepend
+  > .select2-container
+  > .selection
+  > .select2-selection,
+.input-group
+  > .select2-control:not(:last-child)
+  > .select2-container
+  > .selection
+  > .select2-selection {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  min-width: 100px !important;
+}
+
+.select2-container--default.select2-container--disabled
+  .select2-selection--single,
+.select2-container--default.select2-container--disabled
+  .select2-selection--multiple {
+  background-color: #e9ecef;
+}

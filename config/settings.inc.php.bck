@@ -1,0 +1,19 @@
+<?php
+define('_DB_SERVER_', 'localhost');
+define('_DB_NAME_', 'sexzoco');
+define('_DB_USER_', 'sexzoco');
+define('_DB_PASSWD_', 'Xk1bv&146');
+define('_DB_PREFIX_', 'ps_');
+define('_MYSQL_ENGINE_', 'InnoDB');
+define('_PS_CACHING_SYSTEM_', 'CacheMemcache');
+define('_PS_CACHE_ENABLED_', '0');
+
+
+
+define('_COOKIE_KEY_', 'SPopYwAWXugBWkIyrgmJMHqFNOxVXCudvPDrJ33Imipy5SNG8s04mMi8');
+define('_COOKIE_IV_', 'F3gp56Md');
+define('_PS_CREATION_DATE_', '2014-08-28');
+if (!defined('_PS_VERSION_'))
+	define('_PS_VERSION_', '1.6.0.9');
+define('_RIJNDAEL_KEY_', '7ViQyGnYuOZHARTM9QUxVX3aLy5bMJbR');
+define('_RIJNDAEL_IV_', 'tIZLuRNUdDQdi8zitTcqPw==');

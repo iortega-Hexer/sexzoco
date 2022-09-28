@@ -1,0 +1,22 @@
+#main {
+  padding-bottom: 0;
+}
+
+#content {
+  padding-top: 100px !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.page-sidebar-closed #content {
+  margin-left: 50px !important;
+}
+
+#content .page-subtitle {
+  display: none !important;
+}
+
+#footer {
+  display: none !important;
+}

@@ -1,0 +1,275 @@
+/*
+
+
+   Magic Scroll v1.0.29 
+   Copyright 2014 Magic Toolbox
+   Buy a license: www.magictoolbox.com/magicscroll/
+   License agreement: http://www.magictoolbox.com/license/
+
+
+*/
+.MagicScroll {
+    display: none;
+    border: none;
+    z-index: 1;
+}
+
+.MagicScrollItem {
+    text-align: center;
+}
+
+.MagicScrollItem img {
+    display: block;
+    margin: 0 auto;
+}
+
+.MagicScrollArrows {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url(/produccion/sexzoco_presta/modules/magicscroll/graphics/arrows.png);
+    padding: 0px !important;
+}
+
+.MagicScrollArrowTop {
+    background-position: 24px 0;
+}
+
+.MagicScrollArrowRight {
+    background-position: 0 0;
+}
+
+.MagicScrollArrowBottom {
+    background-position: 24px 24px;
+}
+
+.MagicScrollArrowLeft {
+    background-position: 0 24px;
+}
+
+.MagicScrollSliderWrapper {
+    background: #f3f3f3;
+    border-top: 1px solid #e1e1e1;
+}
+
+.MagicScrollSlider {
+    background: #f7f7f7;
+    border:1px outset #e1e1e1;
+    border-style: solid outset outset solid;
+}
+
+.MagicScrollSliderShadow {
+    background: #dfdfdf;
+    border:1px solid #dfdfdf;
+}
+
+/* Style for scroll with borders and background */
+.MagicScroll.msborder {
+    background:#efefef;
+    border:1px solid #e1e1e1;
+}
+.MagicScroll.msborder .MagicScrollItem {
+    background:#fff;
+    border-right:1px solid #efefef;
+    padding: 6px 0;
+}
+.MagicScroll.msborder.vertical .MagicScrollItem {
+    border-right:none;
+    border-bottom:1px solid #efefef;
+}
+.MagicScroll.msborder .MagicScrollArrows {
+    width: 36px;
+    height: 36px;
+    background: url(/produccion/sexzoco_presta/modules/magicscroll/graphics/arrows-padding.png);
+}
+
+.MagicScroll.msborder .MagicScrollArrowTop {
+    background-position: 36px 0;
+}
+.MagicScroll.msborder .MagicScrollArrowBottom {
+    background-position: 36px 36px;
+}
+.MagicScroll.msborder .MagicScrollArrowLeft {
+    background-position: 0 36px;
+}
+
+.MagicScroll.mstext .MagicScrollItem {
+    text-align: left;
+    line-height:1.2;
+    padding:9px;
+    border:none;
+}
+
+/* Contaner with main image and selectors container */
+div.MagicToolboxContainer {
+    text-align: center;
+}
+
+/* Main image styles */
+div.MagicToolboxContainer a {
+    margin: 0 auto;
+}
+
+/* Container with selectors*/
+div.MagicToolboxSelectorsContainer {
+    clear: both;
+}
+
+/* Selectors styles */
+div.MagicToolboxSelectorsContainer a {
+    display: inline-block;
+    margin: 4px 1px;
+}
+
+div.MagicScroll {
+    margin: auto !important;
+}
+
+div.MagicToolboxMessage {
+    text-align: center;
+}
+
+/* selectors-left */
+div.MagicToolboxContainer.selectorsLeft .MagicToolboxMainContainer {
+    float: left;
+}
+div.MagicToolboxContainer.selectorsLeft .MagicToolboxSelectorsContainer {
+    float: left;
+}
+
+/* selectors-right */
+div.MagicToolboxContainer.selectorsRight .MagicToolboxMainContainer {
+    float: right;
+}
+div.MagicToolboxContainer.selectorsRight .MagicToolboxSelectorsContainer {
+    float: right;
+}
+
+.MagicScrollItem a {
+    /* NOTE: magicscroll makes the image smaller if there is a margin */
+    margin: 0 !important;
+}
+
+#center_column, #left_column, #right_column {
+    overflow: visible !important;
+}
+#primary_block #image-block {
+    height: auto;
+}
+#categoryMagicScroll.prestahop14x {
+    margin-top: 2em;
+    position: relative;
+}
+#categoryMagicScroll.prestahop14x .MagicScrollItem {
+    background: #D0D3D8;
+    border: 1px solid #000000;
+    padding: 6px;
+    margin: 0;
+}
+#categoryMagicScroll.prestahop14x .MagicScrollItem a {
+    color: #374853;
+    text-decoration: none;
+}
+#categoryMagicScroll.prestahop14x .MagicScrollItem .product_desc {
+    padding: 0;
+    height: 150px;
+    overflow: hidden;
+}
+#categoryMagicScroll.prestahop14x .MagicScrollItem .bottom_block {
+    position: absolute;
+    bottom: 6px;
+    width: 136px;
+}
+#categoryMagicScroll.prestahop14x .MagicScrollItem .button {
+    margin: 0 auto;
+}
+#categoryMagicScroll.prestahop14x .MagicScrollItem .compare {
+    padding: 0;
+}
+#categoryMagicScroll.prestahop14x span.availability {
+    color: #488C40;
+    font-size: 0.9em;
+}
+#categoryMagicScroll.prestahop14x .discount, #categoryMagicScroll .on_sale, #categoryMagicScroll .online_only {
+    color: #DA0F00;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#categoryMagicScroll.prestahop14x span.new {
+    background-color: #8BC95E;
+    border: 1px solid #488C40;
+    color: white;
+    font-size: 0.6em;
+    font-weight: bold;
+    margin: 0 1em 0 0;
+    padding: 0 0.4em;
+    text-transform: uppercase;
+    vertical-align: 0.3em
+}
+#categoryMagicScroll.prestahop15x .MagicScrollItem {
+    border: 1px solid #EEEEEE;
+    padding: 12px 8px;
+}
+#categoryMagicScroll.prestahop15x .bottom_block {
+    position: absolute;
+    bottom: 6px;
+    width: 136px;
+}
+#categoryMagicScroll.prestahop15x a {
+    color: #666666;
+    text-decoration: none;
+}
+#categoryMagicScroll.prestahop15x .content_price {
+    margin: 26px 0 15px;
+}
+#categoryMagicScroll.prestahop15x .discount, #categoryMagicScroll.prestahop15x .on_sale, #categoryMagicScroll.prestahop15x .online_only {
+    display: block;
+    font-weight: bold;
+    color: #990000;
+    text-transform: uppercase
+}
+#categoryMagicScroll.prestahop15x .discount {
+    display: inline-block;
+    padding: 1px 5px;
+    font-size: 10px;
+    color: #fff;
+    background: none repeat scroll 0 0 #9B0000
+}
+#categoryMagicScroll.prestahop15x .price {
+    font-weight:bold;
+    font-size: 18px;
+    color:#990000
+}
+#categoryMagicScroll.prestahop15x span.availability {
+    display:none;
+    color: #488C40
+}
+/* for proper positioning span.new */
+#categoryMagicScroll.prestahop15x a.product_img_link {
+    border: 1px solid #CCCCCC;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+#categoryMagicScroll.prestahop15x span.new {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right:-30px;
+    padding: 1px 4px;
+    width: 101px;
+    font-size:10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform: rotate(45deg);
+    background-color: #990000
+}
+#categoryMagicScroll.prestahop15x h3 {
+    margin-top: 5px;
+}
+/* Prestashop 1.5.x */
+#pb-right-column  #image-block img {border: 0 none}

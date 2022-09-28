@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@types/grecaptcha": "^3.0.4",
+    "@types/jquery": "^3.3.31",
+    "uglify-js": "^3.17.0"
+  }
+}

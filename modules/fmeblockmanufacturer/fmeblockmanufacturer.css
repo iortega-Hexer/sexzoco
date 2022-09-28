@@ -1,0 +1,17 @@
+#manufacturers_block_home .jcarousel-skin-tango { padding-top:20px}
+
+#manufacturers_block_home .jcarousel-skin-tango ul { left: 0px;}
+
+#manufacturers_block_home .jcarousel-skin-tango li { display: block; width: 60px; float: left; margin-right: 15px; margin-left:15px }
+
+#manufacturers_block_home .jcarousel-skin-tango li img { border: 1px solid #ccc }
+
+#manufacturers_block_home .jcarousel-skin-tango .jcarousel-clip { overflow: hidden; }
+
+#manufacturers_block_home .jcarousel-skin-tango .jcarousel-clip-horizontal { width: 470px; margin: 0 auto; }
+
+#manufacturers_block_home .jcarousel-skin-tango .jcarousel-next-horizontal { position: absolute; top: 23px; right: 2px; width: 11px; height: 16px; cursor: pointer; background: url(img/thumbs_right.gif) no-repeat 0 0; }
+
+#manufacturers_block_home .jcarousel-skin-tango .jcarousel-prev-horizontal { position: absolute; top: 23px; left: 3px; width: 11px; height: 16px; cursor: pointer; background: url(img/thumbs_left.gif) no-repeat 0 0; }
+#manufacturers_block_home .jcarousel-skin-tango .jcarousel-prev-disabled-horizontal { opacity:0.5; filter: alpha(opacity = 50);}
+#manufacturers_block_home .jcarousel-skin-tango .jcarousel-next-disabled-horizontal { opacity:0.5; filter: alpha(opacity = 50);}

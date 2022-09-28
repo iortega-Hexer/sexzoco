@@ -1,0 +1,116 @@
+.adveg-grecaptcha-fixed .grecaptcha-badge {
+  z-index: 9999;
+}
+
+.adveg-grecaptcha-inline {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.adveg-grecaptcha-inline.adveg-grecaptcha-left {
+  justify-content: flex-start;
+}
+
+.adveg-grecaptcha-inline.adveg-grecaptcha-center {
+  justify-content: center;
+}
+
+.adveg-grecaptcha-inline.adveg-grecaptcha-right {
+  justify-content: flex-end;
+}
+
+#adveg-grecaptcha.adveg-grecaptcha-inline {
+  margin: 15px 0;
+  clear: both;
+}
+
+#adveg-grecaptcha-legal {
+  font-size: 80%;
+  padding: 15px 0;
+  clear: both;
+  text-align: center;
+}
+
+.adveg-grecaptcha-btn-disabled {
+  opacity: 0.65;
+}
+
+#adveg-grecaptcha.adveg-grecaptcha-inline > .grecaptcha-badge {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#adveg-validation-failed {
+  position: fixed;
+  bottom: 0;
+  left: 5px;
+  right: 5px;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  #adveg-validation-failed {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+#adveg-validation-failed > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  background-color: #ff4d4d;
+  padding: 0 0 0 1rem;
+  margin-bottom: 0.937rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#adveg-validation-failed > div::before {
+  content: '';
+  width: 24px;
+  -ms-flex: 0 0 24px;
+  -webkit-box-flex: 0;
+  flex: 0 0 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTEgMTVoMnYyaC0yem0wLThoMnY2aC0yem0uOTktNUM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4eiIvPjwvc3ZnPg==');
+}
+
+#adveg-validation-failed > div > div {
+  padding: 0.75rem 0;
+  font-size: 90%;
+}
+
+#adveg-validation-failed > div > button {
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+  color: #fff;
+  font-size: 1.625rem;
+  padding: 0.75rem 1rem;
+  margin: 0 0 0 auto;
+  opacity: 0.5;
+  cursor: pointer;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#adveg-validation-failed > div > button:hover {
+  opacity: 1;
+}
+
+#adveg-validation-failed > div > button span {
+  position: relative;
+  top: -1px;
+}

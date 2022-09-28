@@ -1,0 +1,166 @@
+// Functions
+@function primaryrgba($opacity: 0.9)
+	@return rgba(104,168,222,$opacity)
+
+@function secundaryrgba($opacity: 0.9)
+	@return rgba(196,0,106,$opacity)
+
+@function whitergba($opacity: 0.9)
+	@return rgba(255,255,255,$opacity)
+
+//función usada para agergar fuentes
+@function str-replace($string, $search, $replace: "")
+	$index: str-index($string, $search)
+	@if $index
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace)
+	@return $string
+//función para agregar fuentes
+=font-face($name, $path, $filename, $weight: null, $style: null, $exts: ttf)
+	$src: null
+
+	$extmods: (eot: "?", svg: "#" + str-replace($filename, " ", "_"))
+
+	$formats: (ttf: "truetype")
+
+	@each $ext in $exts
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext)
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext)
+		$src: append($src, url(quote($path + "/" + $filename + "." + $extmod)) format(quote($format)), comma)
+
+
+	@font-face
+    font-family: quote($name)
+    font-style: $style
+    font-weight: $weight
+    font-display: swap
+    src: $src
+
+
+
+=col($i)
+  flex-basis: ((100% / 12) * $i)
+  box-sizing: border-box
+
+=dob-col($i)
+	@if $i > 12
+		$i: 12
+	@if $i < 1
+		$i: 1
+	+col($i)
+=aux-col-($i)
+	box-sizing: border-box
+	flex-basis: (100% / 12) * $i
+
+=col-($i)
+	@if $i > 12
+		$i : 12
+	@if $i < 1
+		$i : 1
+	+aux-col-($i)
+
+=row()
+	align-content: space-between
+	box-sizing: border-box
+	display: flex
+	flex-wrap: wrap
+
+
+=shadow-material()
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15)
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15)
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15)
+// end functions
+
+@keyframes animatezoom
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(0.6)
+	75%
+		transform: scale(1.4)
+	100%
+		transform: scale(1)
+
+@keyframes animatezoomoutin
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.1)
+	100%
+		transform: scale(1)
+
+@keyframes animatezoomout
+	0%
+		transform: scale(0)
+	25%
+		transform: scale(0.25)
+	50%
+				transform: scale(0.5)
+	75%
+		transform: scale(0.75)
+	100%
+		transform: scale(1)
+
+@keyframes fading
+	0%
+		opacity: 0
+	50%
+		opacity: 0.5
+	100%
+		opacity: 1
+
+@keyframes skewing
+	0%
+		transform: rotate(4deg) scale(1) skew(1deg) translate(10px)
+	100%
+		transform: rotate(0deg) scale(1) skew(1deg) translate(0px)
+
+@keyframes zoomInUp
+  0%
+	  opacity: 0
+	  transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0)
+	  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  60%
+	  opacity: 1
+	  transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0)
+	  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+@keyframes bounceIn
+  0%, 20%, 40%, 60%, 80%, 100%
+	  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+  0%
+	  opacity: 0
+	  transform: scale3d(.3, .3, .3)
+  20%
+	  transform: scale3d(1.1, 1.1, 1.1)
+  40%
+	  transform: scale3d(.9, .9, .9)
+  60%
+    opacity: 1
+    transform: scale3d(1.03, 1.03, 1.03)
+  80%
+	  transform: scale3d(.97, .97, .97)
+  100%
+	  opacity: 1
+	  transform: scale3d(1, 1, 1)
+
+@keyframes rubberBand
+	0%
+    transform: scaleX(1)
+	30%
+    transform: scale3d(1.25,.75,1)
+	40%
+    transform: scale3d(.75,1.25,1)
+	50%
+    transform: scale3d(1.15,.85,1)
+	65%
+    transform: scale3d(.95,1.05,1)
+	75%
+    transform: scale3d(1.05,.95,1)
+	100%
+    transform: scaleX(1)
+
+
+=bg-gradient ( $orientacion: to left, $color1: #68a8de, $amount1: 20%, $color2: #c4006a, $amount2: 20%)
+  background:  linear-gradient($orientacion, $color1 $amount1,$color2 $amount2)
+  //linear-gradient($orientacion, $color, adjust-hue($color, $amount)) fixed
